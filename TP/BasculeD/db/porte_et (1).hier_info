@@ -1,0 +1,9 @@
+|BasculeD
+Reset => Q~reg0.ACLR
+Reset => Q~0.IN0
+Set => Q~0.IN1
+Clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+

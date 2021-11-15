@@ -1,0 +1,310 @@
+Simulator report for segements7
+Thu Sep 02 10:57:37 2021
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 148 nodes    ;
+; Simulation Coverage         ;     100.00 % ;
+; Total Number of Transitions ; 7318         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                             ;
++--------------------------------------------------------------------------------------------+-------------------+---------------+
+; Option                                                                                     ; Setting           ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------------+---------------+
+; Simulation mode                                                                            ; Functional        ; Timing        ;
+; Start time                                                                                 ; 0 ns              ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF              ;               ;
+; Vector input source                                                                        ; sim/segments7.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                ; On            ;
+; Check outputs                                                                              ; Off               ; Off           ;
+; Report simulation coverage                                                                 ; On                ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                ; On            ;
+; Display missing 1-value coverage report                                                    ; On                ; On            ;
+; Display missing 0-value coverage report                                                    ; On                ; On            ;
+; Detect setup and hold time violations                                                      ; Off               ; Off           ;
+; Detect glitches                                                                            ; Off               ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off               ; Off           ;
+; Generate Signal Activity File                                                              ; Off               ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off               ; Off           ;
+; Group bus channels in simulation results                                                   ; Off               ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE        ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off               ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On                ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto              ; Auto          ;
++--------------------------------------------------------------------------------------------+-------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;     100.00 % ;
+; Total nodes checked                                 ; 148          ;
+; Total output ports checked                          ; 148          ;
+; Total output ports with complete 1/0-value coverage ; 148          ;
+; Total output ports with no 1/0-value coverage       ; 0            ;
+; Total output ports with no 1-value coverage         ; 0            ;
+; Total output ports with no 0-value coverage         ; 0            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                          ;
++-------------------------+-------------------------+------------------+
+; Node Name               ; Output Port Name        ; Output Port Type ;
++-------------------------+-------------------------+------------------+
+; |segments7|seg[1]~0     ; |segments7|seg[1]~0     ; out              ;
+; |segments7|comb~0       ; |segments7|comb~0       ; out0             ;
+; |segments7|seg[0]~1     ; |segments7|seg[0]~1     ; out              ;
+; |segments7|comb~1       ; |segments7|comb~1       ; out0             ;
+; |segments7|seg[6]~2     ; |segments7|seg[6]~2     ; out0             ;
+; |segments7|seg[0]~3     ; |segments7|seg[0]~3     ; out              ;
+; |segments7|seg[0]~4     ; |segments7|seg[0]~4     ; out              ;
+; |segments7|seg[0]~5     ; |segments7|seg[0]~5     ; out              ;
+; |segments7|comb~2       ; |segments7|comb~2       ; out0             ;
+; |segments7|seg[6]~6     ; |segments7|seg[6]~6     ; out0             ;
+; |segments7|seg[0]~7     ; |segments7|seg[0]~7     ; out              ;
+; |segments7|seg[0]$latch ; |segments7|seg[0]$latch ; out              ;
+; |segments7|seg[3]~8     ; |segments7|seg[3]~8     ; out              ;
+; |segments7|seg[0]~9     ; |segments7|seg[0]~9     ; out              ;
+; |segments7|seg[0]~10    ; |segments7|seg[0]~10    ; out              ;
+; |segments7|seg[6]~11    ; |segments7|seg[6]~11    ; out0             ;
+; |segments7|seg[0]~12    ; |segments7|seg[0]~12    ; out              ;
+; |segments7|comb~3       ; |segments7|comb~3       ; out0             ;
+; |segments7|seg[6]~13    ; |segments7|seg[6]~13    ; out              ;
+; |segments7|seg[5]~14    ; |segments7|seg[5]~14    ; out              ;
+; |segments7|seg[3]~15    ; |segments7|seg[3]~15    ; out              ;
+; |segments7|seg[0]~16    ; |segments7|seg[0]~16    ; out              ;
+; |segments7|seg[1]$latch ; |segments7|seg[1]$latch ; out              ;
+; |segments7|seg[6]~17    ; |segments7|seg[6]~17    ; out0             ;
+; |segments7|seg[6]~18    ; |segments7|seg[6]~18    ; out              ;
+; |segments7|seg[5]~19    ; |segments7|seg[5]~19    ; out              ;
+; |segments7|seg[4]~20    ; |segments7|seg[4]~20    ; out              ;
+; |segments7|seg[3]~21    ; |segments7|seg[3]~21    ; out              ;
+; |segments7|seg[1]~22    ; |segments7|seg[1]~22    ; out              ;
+; |segments7|seg[0]~23    ; |segments7|seg[0]~23    ; out              ;
+; |segments7|seg[0]~24    ; |segments7|seg[0]~24    ; out              ;
+; |segments7|comb~4       ; |segments7|comb~4       ; out0             ;
+; |segments7|seg[6]~25    ; |segments7|seg[6]~25    ; out0             ;
+; |segments7|seg[0]~26    ; |segments7|seg[0]~26    ; out              ;
+; |segments7|seg[2]$latch ; |segments7|seg[2]$latch ; out              ;
+; |segments7|seg[6]~27    ; |segments7|seg[6]~27    ; out              ;
+; |segments7|seg[5]~28    ; |segments7|seg[5]~28    ; out              ;
+; |segments7|seg[4]~29    ; |segments7|seg[4]~29    ; out              ;
+; |segments7|seg[3]~30    ; |segments7|seg[3]~30    ; out              ;
+; |segments7|seg[1]~31    ; |segments7|seg[1]~31    ; out              ;
+; |segments7|seg[6]~32    ; |segments7|seg[6]~32    ; out0             ;
+; |segments7|comb~5       ; |segments7|comb~5       ; out0             ;
+; |segments7|seg[6]~33    ; |segments7|seg[6]~33    ; out              ;
+; |segments7|seg[5]~34    ; |segments7|seg[5]~34    ; out              ;
+; |segments7|seg[4]~35    ; |segments7|seg[4]~35    ; out              ;
+; |segments7|seg[3]~36    ; |segments7|seg[3]~36    ; out              ;
+; |segments7|seg[1]~37    ; |segments7|seg[1]~37    ; out              ;
+; |segments7|seg[3]$latch ; |segments7|seg[3]$latch ; out              ;
+; |segments7|seg[6]~38    ; |segments7|seg[6]~38    ; out0             ;
+; |segments7|seg[6]~39    ; |segments7|seg[6]~39    ; out              ;
+; |segments7|seg[5]~40    ; |segments7|seg[5]~40    ; out              ;
+; |segments7|seg[4]~41    ; |segments7|seg[4]~41    ; out              ;
+; |segments7|seg[3]~42    ; |segments7|seg[3]~42    ; out              ;
+; |segments7|seg[2]~43    ; |segments7|seg[2]~43    ; out              ;
+; |segments7|seg[1]~44    ; |segments7|seg[1]~44    ; out              ;
+; |segments7|comb~6       ; |segments7|comb~6       ; out0             ;
+; |segments7|seg[6]~45    ; |segments7|seg[6]~45    ; out0             ;
+; |segments7|seg[4]$latch ; |segments7|seg[4]$latch ; out              ;
+; |segments7|seg[6]~46    ; |segments7|seg[6]~46    ; out              ;
+; |segments7|seg[5]~47    ; |segments7|seg[5]~47    ; out              ;
+; |segments7|seg[4]~48    ; |segments7|seg[4]~48    ; out              ;
+; |segments7|seg[3]~49    ; |segments7|seg[3]~49    ; out              ;
+; |segments7|seg[2]~50    ; |segments7|seg[2]~50    ; out              ;
+; |segments7|seg[1]~51    ; |segments7|seg[1]~51    ; out              ;
+; |segments7|seg[6]~52    ; |segments7|seg[6]~52    ; out0             ;
+; |segments7|seg[1]~53    ; |segments7|seg[1]~53    ; out              ;
+; |segments7|seg[1]~54    ; |segments7|seg[1]~54    ; out              ;
+; |segments7|seg[1]~55    ; |segments7|seg[1]~55    ; out              ;
+; |segments7|seg[1]~56    ; |segments7|seg[1]~56    ; out              ;
+; |segments7|seg[1]~57    ; |segments7|seg[1]~57    ; out              ;
+; |segments7|seg[1]~58    ; |segments7|seg[1]~58    ; out              ;
+; |segments7|comb~7       ; |segments7|comb~7       ; out0             ;
+; |segments7|seg[2]~59    ; |segments7|seg[2]~59    ; out              ;
+; |segments7|seg[2]~60    ; |segments7|seg[2]~60    ; out              ;
+; |segments7|seg[2]~61    ; |segments7|seg[2]~61    ; out              ;
+; |segments7|seg[2]~62    ; |segments7|seg[2]~62    ; out              ;
+; |segments7|seg[2]~63    ; |segments7|seg[2]~63    ; out              ;
+; |segments7|seg[2]~64    ; |segments7|seg[2]~64    ; out              ;
+; |segments7|seg[2]~65    ; |segments7|seg[2]~65    ; out              ;
+; |segments7|comb~8       ; |segments7|comb~8       ; out0             ;
+; |segments7|seg[3]~66    ; |segments7|seg[3]~66    ; out              ;
+; |segments7|seg[3]~67    ; |segments7|seg[3]~67    ; out              ;
+; |segments7|seg[3]~68    ; |segments7|seg[3]~68    ; out              ;
+; |segments7|seg[3]~69    ; |segments7|seg[3]~69    ; out              ;
+; |segments7|seg[3]~70    ; |segments7|seg[3]~70    ; out              ;
+; |segments7|seg[3]~71    ; |segments7|seg[3]~71    ; out              ;
+; |segments7|seg[3]~72    ; |segments7|seg[3]~72    ; out              ;
+; |segments7|comb~9       ; |segments7|comb~9       ; out0             ;
+; |segments7|seg[4]~73    ; |segments7|seg[4]~73    ; out              ;
+; |segments7|seg[4]~74    ; |segments7|seg[4]~74    ; out              ;
+; |segments7|seg[4]~75    ; |segments7|seg[4]~75    ; out              ;
+; |segments7|seg[4]~76    ; |segments7|seg[4]~76    ; out              ;
+; |segments7|seg[4]~77    ; |segments7|seg[4]~77    ; out              ;
+; |segments7|seg[4]~78    ; |segments7|seg[4]~78    ; out              ;
+; |segments7|seg[4]~79    ; |segments7|seg[4]~79    ; out              ;
+; |segments7|comb~10      ; |segments7|comb~10      ; out0             ;
+; |segments7|seg[5]~80    ; |segments7|seg[5]~80    ; out              ;
+; |segments7|seg[5]~81    ; |segments7|seg[5]~81    ; out              ;
+; |segments7|seg[5]~82    ; |segments7|seg[5]~82    ; out              ;
+; |segments7|seg[5]~83    ; |segments7|seg[5]~83    ; out              ;
+; |segments7|seg[5]~84    ; |segments7|seg[5]~84    ; out              ;
+; |segments7|seg[5]~85    ; |segments7|seg[5]~85    ; out              ;
+; |segments7|seg[5]~86    ; |segments7|seg[5]~86    ; out              ;
+; |segments7|comb~11      ; |segments7|comb~11      ; out0             ;
+; |segments7|seg[6]~87    ; |segments7|seg[6]~87    ; out              ;
+; |segments7|seg[6]~88    ; |segments7|seg[6]~88    ; out0             ;
+; |segments7|seg[6]~89    ; |segments7|seg[6]~89    ; out              ;
+; |segments7|seg[6]~90    ; |segments7|seg[6]~90    ; out0             ;
+; |segments7|seg[6]~91    ; |segments7|seg[6]~91    ; out              ;
+; |segments7|seg[6]~92    ; |segments7|seg[6]~92    ; out0             ;
+; |segments7|seg[6]~93    ; |segments7|seg[6]~93    ; out              ;
+; |segments7|seg[6]~94    ; |segments7|seg[6]~94    ; out0             ;
+; |segments7|seg[6]~95    ; |segments7|seg[6]~95    ; out              ;
+; |segments7|seg[6]~96    ; |segments7|seg[6]~96    ; out0             ;
+; |segments7|seg[6]~97    ; |segments7|seg[6]~97    ; out              ;
+; |segments7|seg[6]~98    ; |segments7|seg[6]~98    ; out0             ;
+; |segments7|seg[6]~99    ; |segments7|seg[6]~99    ; out              ;
+; |segments7|comb~12      ; |segments7|comb~12      ; out0             ;
+; |segments7|seg[5]$latch ; |segments7|seg[5]$latch ; out              ;
+; |segments7|comb~13      ; |segments7|comb~13      ; out0             ;
+; |segments7|seg[6]$latch ; |segments7|seg[6]$latch ; out              ;
+; |segments7|entre[0]     ; |segments7|entre[0]     ; out              ;
+; |segments7|entre[1]     ; |segments7|entre[1]     ; out              ;
+; |segments7|entre[2]     ; |segments7|entre[2]     ; out              ;
+; |segments7|entre[3]     ; |segments7|entre[3]     ; out              ;
+; |segments7|seg[0]       ; |segments7|seg[0]       ; pin_out          ;
+; |segments7|seg[1]       ; |segments7|seg[1]       ; pin_out          ;
+; |segments7|seg[2]       ; |segments7|seg[2]       ; pin_out          ;
+; |segments7|seg[3]       ; |segments7|seg[3]       ; pin_out          ;
+; |segments7|seg[4]       ; |segments7|seg[4]       ; pin_out          ;
+; |segments7|seg[5]       ; |segments7|seg[5]       ; pin_out          ;
+; |segments7|seg[6]       ; |segments7|seg[6]       ; pin_out          ;
+; |segments7|Equal0~0     ; |segments7|Equal0~0     ; out0             ;
+; |segments7|Equal1~0     ; |segments7|Equal1~0     ; out0             ;
+; |segments7|Equal2~0     ; |segments7|Equal2~0     ; out0             ;
+; |segments7|Equal3~0     ; |segments7|Equal3~0     ; out0             ;
+; |segments7|Equal4~0     ; |segments7|Equal4~0     ; out0             ;
+; |segments7|Equal5~0     ; |segments7|Equal5~0     ; out0             ;
+; |segments7|Equal6~0     ; |segments7|Equal6~0     ; out0             ;
+; |segments7|Equal7~0     ; |segments7|Equal7~0     ; out0             ;
+; |segments7|Equal8~0     ; |segments7|Equal8~0     ; out0             ;
+; |segments7|Equal9~0     ; |segments7|Equal9~0     ; out0             ;
+; |segments7|Equal10~0    ; |segments7|Equal10~0    ; out0             ;
+; |segments7|Equal11~0    ; |segments7|Equal11~0    ; out0             ;
+; |segments7|Equal12~0    ; |segments7|Equal12~0    ; out0             ;
+; |segments7|Equal13~0    ; |segments7|Equal13~0    ; out0             ;
+; |segments7|Equal14~0    ; |segments7|Equal14~0    ; out0             ;
+; |segments7|Equal15~0    ; |segments7|Equal15~0    ; out0             ;
++-------------------------+-------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------+
+; Missing 1-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------+
+; Missing 0-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Thu Sep 02 10:57:37 2021
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off segements7 -c segements7
+Info: Using vector source file "sim/segments7.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of segments7.vwf called segements7.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is     100.00 %
+Info: Number of transitions in simulation is 7318
+Info: Vector file segments7.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 150 megabytes
+    Info: Processing ended: Thu Sep 02 10:57:37 2021
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

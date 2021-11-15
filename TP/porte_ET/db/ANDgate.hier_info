@@ -1,0 +1,6 @@
+|ANDgate
+entree1 => sortie~0.IN0
+entree2 => sortie~0.IN1
+sortie <= sortie~0.DB_MAX_OUTPUT_PORT_TYPE
+
+

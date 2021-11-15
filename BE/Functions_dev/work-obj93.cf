@@ -1,0 +1,7 @@
+v 4
+file . "components/bascule.vhd" "c22efc7cbbc0137cfe488b66816a069e68d4841b" "20210930093642.308":
+  entity basculed at 1( 0) + 0 on 13;
+  architecture rtl of basculed at 19( 493) + 0 on 14;
+file . "components/comparateur.vhd" "52623a354fd05fda10b8cb494c2b4f06f829f6ea" "20210930093621.314":
+  entity comparateur at 1( 0) + 0 on 11;
+  architecture rtl of comparateur at 16( 350) + 0 on 12;

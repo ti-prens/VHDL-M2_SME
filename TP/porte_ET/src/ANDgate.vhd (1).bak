@@ -1,0 +1,28 @@
+library ieee;
+use ieee.std_logic_1164.all;
+-- commentaire : On fait une bascule D
+-- Il faut un fichier top level : on choisi ce fichier comme top lelevl
+
+-- on cree nos entitées
+-- une entité est un composant à realiser qui a des entree et des sorties
+entity ANDgate is 
+	port (
+		entree1	: in std_logic;
+		entree2 : in std_logic;
+		sortie	: out std_logic
+	);
+end entity ANDgate;
+
+-- l'architecture decrit le fonctionnement de l'entité
+architecture rtl of ANDgate is -- rtl -> register transistor level
+begin
+-- Les processus dans l'architecture sont le detaile de
+	pANDgate : process(entree1,entree2)
+	begin
+		 if entree1 = '1' and entree2 = '1' then 
+			sortie <= '1';
+		 else  
+			sortie <= '0';
+		end if;
+	end process pANDgate;
+end architecture rtl;

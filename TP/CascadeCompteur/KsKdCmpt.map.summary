@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Mon Sep 06 11:55:24 2021
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
+Revision Name : KsKdCmpt
+Top-level Entity Name : KsKdCmpt
+Family : Cyclone II
+Total logic elements : 47
+    Total combinational functions : 47
+    Dedicated logic registers : 31
+Total registers : 31
+Total pins : 10
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

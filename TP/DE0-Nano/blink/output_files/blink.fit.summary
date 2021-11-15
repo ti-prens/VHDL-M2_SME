@@ -1,0 +1,16 @@
+Fitter Status : Successful - Tue Sep  7 11:17:32 2021
+Quartus Prime Version : 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+Revision Name : blink
+Top-level Entity Name : blink
+Family : Cyclone IV E
+Device : EP4CE22F17C6
+Timing Models : Final
+Total logic elements : 37 / 22,320 ( < 1 % )
+    Total combinational functions : 37 / 22,320 ( < 1 % )
+    Dedicated logic registers : 27 / 22,320 ( < 1 % )
+Total registers : 27
+Total pins : 2 / 154 ( 1 % )
+Total virtual pins : 0
+Total memory bits : 0 / 608,256 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
+Total PLLs : 0 / 4 ( 0 % )

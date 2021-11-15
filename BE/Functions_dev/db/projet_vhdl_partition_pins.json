@@ -1,0 +1,37 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "GeneralOutput[1]",
+					"strict" : false
+				},
+				{
+					"name" : "GeneralOutput[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Prescaler[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Prescaler[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Prescaler[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Reset",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

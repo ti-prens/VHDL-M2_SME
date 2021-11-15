@@ -1,0 +1,5 @@
+|blink
+clk => led.DATAIN
+led <= clk.DB_MAX_OUTPUT_PORT_TYPE
+
+

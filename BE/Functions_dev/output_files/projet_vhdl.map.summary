@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Thu Sep 30 10:43:53 2021
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : projet_vhdl
+Top-level Entity Name : diviseur
+Family : Cyclone IV E
+Total logic elements : 11
+    Total combinational functions : 11
+    Dedicated logic registers : 3
+Total registers : 3
+Total pins : 9
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

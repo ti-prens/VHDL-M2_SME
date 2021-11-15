@@ -1,0 +1,31 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+
+entity compteur is 
+	port (
+		Clk, En, ARst : in std_logic;
+		Q	: out std_logic_vector (7 downto 0)
+	);
+end entity compteur;
+
+architecture rtl of compteur is
+-- on decl	are les variables d e l'architecture avant le premier begin
+signal Q1	: std_logic_vector (7 downto 0);
+begin
+	pcompteur : process(Clk, ARst)
+	begin 
+		 if ARst = '0' then 
+			Q1 <= (others => '0');
+		 elsif  rising_edge(Clk) then
+			 if En = '1' then  -- on rising_edge == Clk'event and Clk
+				Q1 <= Q1 + 1;
+			 end if;
+		 end if;
+		 
+	end process pcompteur;
+
+	Q<=Q1;	
+
+end architecture rtl;

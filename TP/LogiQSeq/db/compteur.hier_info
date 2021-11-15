@@ -1,0 +1,35 @@
+|compteur
+Clk => Q1[7].CLK
+Clk => Q1[6].CLK
+Clk => Q1[5].CLK
+Clk => Q1[4].CLK
+Clk => Q1[3].CLK
+Clk => Q1[2].CLK
+Clk => Q1[1].CLK
+Clk => Q1[0].CLK
+En => Q1[7].ENA
+En => Q1[6].ENA
+En => Q1[5].ENA
+En => Q1[4].ENA
+En => Q1[3].ENA
+En => Q1[2].ENA
+En => Q1[1].ENA
+En => Q1[0].ENA
+ARst => Q1[7].ACLR
+ARst => Q1[6].ACLR
+ARst => Q1[5].ACLR
+ARst => Q1[4].ACLR
+ARst => Q1[3].ACLR
+ARst => Q1[2].ACLR
+ARst => Q1[1].ACLR
+ARst => Q1[0].ACLR
+Q[0] <= Q1[0].DB_MAX_OUTPUT_PORT_TYPE
+Q[1] <= Q1[1].DB_MAX_OUTPUT_PORT_TYPE
+Q[2] <= Q1[2].DB_MAX_OUTPUT_PORT_TYPE
+Q[3] <= Q1[3].DB_MAX_OUTPUT_PORT_TYPE
+Q[4] <= Q1[4].DB_MAX_OUTPUT_PORT_TYPE
+Q[5] <= Q1[5].DB_MAX_OUTPUT_PORT_TYPE
+Q[6] <= Q1[6].DB_MAX_OUTPUT_PORT_TYPE
+Q[7] <= Q1[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
