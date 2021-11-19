@@ -4,31 +4,59 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "GeneralOutput[1]",
+					"name" : "data_valid",
 					"strict" : false
 				},
 				{
-					"name" : "GeneralOutput[2]",
+					"name" : "data_anemometre[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Prescaler[1]",
+					"name" : "data_anemometre[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Prescaler[2]",
+					"name" : "data_anemometre[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Prescaler[0]",
+					"name" : "data_anemometre[3]",
 					"strict" : false
 				},
 				{
-					"name" : "Reset",
+					"name" : "data_anemometre[4]",
 					"strict" : false
 				},
 				{
-					"name" : "Clock",
+					"name" : "data_anemometre[5]",
+					"strict" : false
+				},
+				{
+					"name" : "data_anemometre[6]",
+					"strict" : false
+				},
+				{
+					"name" : "data_anemometre[7]",
+					"strict" : false
+				},
+				{
+					"name" : "continu",
+					"strict" : false
+				},
+				{
+					"name" : "start_stop",
+					"strict" : false
+				},
+				{
+					"name" : "clk_50M",
+					"strict" : false
+				},
+				{
+					"name" : "reset_n",
+					"strict" : false
+				},
+				{
+					"name" : "in_freq_anemometre",
 					"strict" : false
 				}
 			]

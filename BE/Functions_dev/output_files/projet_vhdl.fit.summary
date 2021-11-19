@@ -1,16 +1,20 @@
-Fitter Status : Successful - Thu Sep 30 10:44:18 2021
+Fitter Status : Successful - Thu Nov 18 23:54:38 2021
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : projet_vhdl
-Top-level Entity Name : diviseur
-Family : Cyclone IV E
-Device : EP4CE22F17C6
+Top-level Entity Name : anemometre
+Family : Cyclone V
+Device : 5CGXFC7C7F23C8
 Timing Models : Final
-Total logic elements : 11 / 22,320 ( < 1 % )
-    Total combinational functions : 11 / 22,320 ( < 1 % )
-    Dedicated logic registers : 3 / 22,320 ( < 1 % )
-Total registers : 3
-Total pins : 9 / 154 ( 6 % )
+Logic utilization (in ALMs) : 44 / 56,480 ( < 1 % )
+Total registers : 89
+Total pins : 14 / 268 ( 5 % )
 Total virtual pins : 0
-Total memory bits : 0 / 608,256 ( 0 % )
-Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
-Total PLLs : 0 / 4 ( 0 % )
+Total block memory bits : 0 / 7,024,640 ( 0 % )
+Total RAM Blocks : 0 / 686 ( 0 % )
+Total DSP Blocks : 0 / 156 ( 0 % )
+Total HSSI RX PCSs : 0 / 6 ( 0 % )
+Total HSSI PMA RX Deserializers : 0 / 6 ( 0 % )
+Total HSSI TX PCSs : 0 / 6 ( 0 % )
+Total HSSI PMA TX Serializers : 0 / 6 ( 0 % )
+Total PLLs : 0 / 13 ( 0 % )
+Total DLLs : 0 / 4 ( 0 % )
