@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projet_vhdl
-Thu Sep 30 10:43:53 2021
+Thu Nov 18 23:43:54 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -15,14 +15,27 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. User-Specified and Inferred Latches
   9. General Register Statistics
- 10. Parameter Settings for User Entity Instance: Top-level Entity: |diviseur
- 11. Parameter Settings for User Entity Instance: compteur:U1
- 12. Parameter Settings for User Entity Instance: comparateur:J1
- 13. Port Connectivity Checks: "compteur:U1"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
- 17. Analysis & Synthesis Suppressed Messages
+ 10. Inverted Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Parameter Settings for User Entity Instance: compteur:compt1
+ 13. Parameter Settings for User Entity Instance: timer:timer1
+ 14. Parameter Settings for User Entity Instance: timer:timer1|diviseur:div
+ 15. Parameter Settings for User Entity Instance: timer:timer1|diviseur:div|compteur:U1
+ 16. Parameter Settings for User Entity Instance: timer:timer1|diviseur:div|comparateur:J1
+ 17. Parameter Settings for User Entity Instance: timer:timer1|compteur:compt1
+ 18. Parameter Settings for User Entity Instance: timer:timer1|comparateur:compa1
+ 19. Parameter Settings for User Entity Instance: timer:timer1|comparateur:compa2
+ 20. Port Connectivity Checks: "edge_detector:edge_detector_1"
+ 21. Port Connectivity Checks: "timer:timer1|comparateur:compa2"
+ 22. Port Connectivity Checks: "timer:timer1|comparateur:compa1"
+ 23. Port Connectivity Checks: "timer:timer1|compteur:compt1"
+ 24. Port Connectivity Checks: "timer:timer1|diviseur:div|comparateur:J1"
+ 25. Port Connectivity Checks: "timer:timer1|diviseur:div|compteur:U1"
+ 26. Port Connectivity Checks: "timer:timer1"
+ 27. Port Connectivity Checks: "compteur:compt1"
+ 28. Post-Synthesis Netlist Statistics for Top Partition
+ 29. Elapsed Time Per Partition
+ 30. Analysis & Synthesis Messages
 
 
 
@@ -45,110 +58,114 @@ refer to the applicable agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Sep 30 10:43:53 2021       ;
-; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
-; Revision Name                      ; projet_vhdl                                 ;
-; Top-level Entity Name              ; diviseur                                    ;
-; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 11                                          ;
-;     Total combinational functions  ; 11                                          ;
-;     Dedicated logic registers      ; 3                                           ;
-; Total registers                    ; 3                                           ;
-; Total pins                         ; 9                                           ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-+------------------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Thu Nov 18 23:43:54 2021       ;
+; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Revision Name                   ; projet_vhdl                                 ;
+; Top-level Entity Name           ; anemometre                                  ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 63                                          ;
+; Total pins                      ; 14                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                              ;
-+------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                           ; Setting            ; Default Value      ;
-+------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                           ; EP4CE22F17C6       ;                    ;
-; Top-level entity name                                            ; diviseur           ; projet_vhdl        ;
-; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
-; Use smart compilation                                            ; Off                ; Off                ;
-; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
-; Enable compact report table                                      ; Off                ; Off                ;
-; Restructure Multiplexers                                         ; Auto               ; Auto               ;
-; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
-; Preserve fewer node names                                        ; On                 ; On                 ;
-; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
-; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                         ; Auto               ; Auto               ;
-; Safe State Machine                                               ; Off                ; Off                ;
-; Extract Verilog State Machines                                   ; On                 ; On                 ;
-; Extract VHDL State Machines                                      ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
-; Parallel Synthesis                                               ; On                 ; On                 ;
-; DSP Block Balancing                                              ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                               ; On                 ; On                 ;
-; Power-Up Don't Care                                              ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
-; Remove Duplicate Registers                                       ; On                 ; On                 ;
-; Ignore CARRY Buffers                                             ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
-; Ignore LCELL Buffers                                             ; Off                ; Off                ;
-; Ignore SOFT Buffers                                              ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
-; Optimization Technique                                           ; Balanced           ; Balanced           ;
-; Carry Chain Length                                               ; 70                 ; 70                 ;
-; Auto Carry Chains                                                ; On                 ; On                 ;
-; Auto Open-Drain Pins                                             ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
-; Auto ROM Replacement                                             ; On                 ; On                 ;
-; Auto RAM Replacement                                             ; On                 ; On                 ;
-; Auto DSP Block Replacement                                       ; On                 ; On                 ;
-; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
-; Strict RAM Replacement                                           ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
-; Auto RAM Block Balancing                                         ; On                 ; On                 ;
-; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
-; Auto Resource Sharing                                            ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
-; Timing-Driven Synthesis                                          ; On                 ; On                 ;
-; Report Parameter Settings                                        ; On                 ; On                 ;
-; Report Source Assignments                                        ; On                 ; On                 ;
-; Report Connectivity Checks                                       ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
-; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
-; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
-; HDL message level                                                ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
-; Clock MUX Protection                                             ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
-; Block Design Naming                                              ; Auto               ; Auto               ;
-; SDC constraint protection                                        ; Off                ; Off                ;
-; Synthesis Effort                                                 ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
-+------------------------------------------------------------------+--------------------+--------------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CGXFC7C7F23C8     ;                    ;
+; Top-level entity name                                                           ; anemometre         ; projet_vhdl        ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -157,81 +174,86 @@ refer to the applicable agreement for further details.
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
 ; Number detected on machine ; 4           ;
-; Maximum allowed            ; 2           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 2           ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                        ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                 ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+---------+
-; components/compteur.vhd          ; yes             ; User VHDL File  ; /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/components/compteur.vhd    ;         ;
-; components/comparateur.vhd       ; yes             ; User VHDL File  ; /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/components/comparateur.vhd ;         ;
-; components/diviseur.vhd          ; yes             ; User VHDL File  ; /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/components/diviseur.vhd    ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                                                         ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------+---------+
+; ../functions/FPGA/anemometre.vhd ; yes             ; User VHDL File  ; /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/functions/FPGA/anemometre.vhd              ;         ;
+; components/edge_detector.vhd     ; yes             ; User VHDL File  ; /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/edge_detector.vhd ;         ;
+; components/timer.vhd             ; yes             ; User VHDL File  ; /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/timer.vhd         ;         ;
+; components/compteur.vhd          ; yes             ; User VHDL File  ; /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/compteur.vhd      ;         ;
+; components/comparateur.vhd       ; yes             ; User VHDL File  ; /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/comparateur.vhd   ;         ;
+; components/diviseur.vhd          ; yes             ; User VHDL File  ; /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/diviseur.vhd      ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                     ;
-+---------------------------------------------+-------------------+
-; Resource                                    ; Usage             ;
-+---------------------------------------------+-------------------+
-; Estimated Total logic elements              ; 11                ;
-;                                             ;                   ;
-; Total combinational functions               ; 11                ;
-; Logic element usage by number of LUT inputs ;                   ;
-;     -- 4 input functions                    ; 6                 ;
-;     -- 3 input functions                    ; 5                 ;
-;     -- <=2 input functions                  ; 0                 ;
-;                                             ;                   ;
-; Logic elements by mode                      ;                   ;
-;     -- normal mode                          ; 11                ;
-;     -- arithmetic mode                      ; 0                 ;
-;                                             ;                   ;
-; Total registers                             ; 3                 ;
-;     -- Dedicated logic registers            ; 3                 ;
-;     -- I/O registers                        ; 0                 ;
-;                                             ;                   ;
-; I/O pins                                    ; 9                 ;
-;                                             ;                   ;
-; Embedded Multiplier 9-bit elements          ; 0                 ;
-;                                             ;                   ;
-; Maximum fan-out node                        ; compteur:U1|Q1[0] ;
-; Maximum fan-out                             ; 6                 ;
-; Total fan-out                               ; 56                ;
-; Average fan-out                             ; 1.75              ;
-+---------------------------------------------+-------------------+
++-------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                 ;
++---------------------------------------------+---------------+
+; Resource                                    ; Usage         ;
++---------------------------------------------+---------------+
+; Estimate of Logic utilization (ALMs needed) ; 45            ;
+;                                             ;               ;
+; Combinational ALUT usage for logic          ; 76            ;
+;     -- 7 input functions                    ; 0             ;
+;     -- 6 input functions                    ; 10            ;
+;     -- 5 input functions                    ; 8             ;
+;     -- 4 input functions                    ; 5             ;
+;     -- <=3 input functions                  ; 53            ;
+;                                             ;               ;
+; Dedicated logic registers                   ; 63            ;
+;                                             ;               ;
+; I/O pins                                    ; 14            ;
+;                                             ;               ;
+; Total DSP Blocks                            ; 0             ;
+;                                             ;               ;
+; Maximum fan-out node                        ; clk_50M~input ;
+; Maximum fan-out                             ; 63            ;
+; Total fan-out                               ; 435           ;
+; Average fan-out                             ; 2.60          ;
++---------------------------------------------+---------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                           ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name      ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+-------------+--------------+
-; |diviseur                  ; 11 (0)              ; 3 (0)                     ; 0           ; 0            ; 0       ; 0         ; 9    ; 0            ; |diviseur                ; diviseur    ; work         ;
-;    |comparateur:J1|        ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |diviseur|comparateur:J1 ; comparateur ; work         ;
-;    |compteur:U1|           ; 4 (4)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |diviseur|compteur:U1    ; compteur    ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+-------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                               ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                  ; Entity Name   ; Library Name ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------+---------------+--------------+
+; |anemometre                        ; 76 (3)              ; 63 (2)                    ; 0                 ; 0          ; 14   ; 0            ; |anemometre                                          ; anemometre    ; work         ;
+;    |compteur:compt1|               ; 8 (8)               ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |anemometre|compteur:compt1                          ; compteur      ; work         ;
+;    |edge_detector:edge_detector_1| ; 1 (1)               ; 2 (2)                     ; 0                 ; 0          ; 0    ; 0            ; |anemometre|edge_detector:edge_detector_1            ; edge_detector ; work         ;
+;    |timer:timer1|                  ; 64 (17)             ; 51 (19)                   ; 0                 ; 0          ; 0    ; 0            ; |anemometre|timer:timer1                             ; timer         ; work         ;
+;       |comparateur:compa1|         ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |anemometre|timer:timer1|comparateur:compa1          ; comparateur   ; work         ;
+;       |compteur:compt1|            ; 17 (17)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |anemometre|timer:timer1|compteur:compt1             ; compteur      ; work         ;
+;       |diviseur:div|               ; 29 (1)              ; 16 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |anemometre|timer:timer1|diviseur:div                ; diviseur      ; work         ;
+;          |comparateur:J1|          ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |anemometre|timer:timer1|diviseur:div|comparateur:J1 ; comparateur   ; work         ;
+;          |compteur:U1|             ; 16 (16)             ; 16 (16)                   ; 0                 ; 0          ; 0    ; 0            ; |anemometre|timer:timer1|diviseur:div|compteur:U1    ; compteur      ; work         ;
++------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+---------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                               ;
-+----------------------------------------------------+---------------------+------------------------+
-; Latch Name                                         ; Latch Enable Signal ; Free of Timing Hazards ;
-+----------------------------------------------------+---------------------+------------------------+
-; comparateur:J1|sortie_comparaison[1]               ; GND                 ; yes                    ;
-; comparateur:J1|sortie_comparaison[2]               ; GND                 ; yes                    ;
-; Number of user-specified and inferred latches = 2  ;                     ;                        ;
-+----------------------------------------------------+---------------------+------------------------+
++---------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                           ;
++----------------------------------------------------------------+---------------------+------------------------+
+; Latch Name                                                     ; Latch Enable Signal ; Free of Timing Hazards ;
++----------------------------------------------------------------+---------------------+------------------------+
+; timer:timer1|diviseur:div|comparateur:J1|sortie_comparaison[1] ; GND                 ; yes                    ;
+; timer:timer1|comparateur:compa1|sortie_comparaison[2]          ; GND                 ; yes                    ;
+; timer:timer1|diviseur:div|comparateur:J1|sortie_comparaison[2] ; GND                 ; yes                    ;
+; Number of user-specified and inferred latches = 3              ;                     ;                        ;
++----------------------------------------------------------------+---------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -240,54 +262,198 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 3     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 63    ;
+; Number of registers using Synchronous Clear  ; 40    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |diviseur ;
-+----------------+-------+-------------------------------------------------+
-; Parameter Name ; Value ; Type                                            ;
-+----------------+-------+-------------------------------------------------+
-; P              ; 3     ; Signed Integer                                  ;
-+----------------+-------+-------------------------------------------------+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; timer_enable                           ; 2       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+; 3:1                ; 16 bits   ; 32 LEs        ; 0 LEs                ; 32 LEs                 ; Yes        ; |anemometre|timer:timer1|compteur:compt1|count[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------+
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: compteur:compt1 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; n              ; 8     ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: timer:timer1 ;
++----------------+-------+----------------------------------+
+; Parameter Name ; Value ; Type                             ;
++----------------+-------+----------------------------------+
+; p              ; 16    ; Signed Integer                   ;
++----------------+-------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: timer:timer1|diviseur:div ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; p              ; 16    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: timer:timer1|diviseur:div|compteur:U1 ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: timer:timer1|diviseur:div|comparateur:J1 ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; n              ; 16    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: timer:timer1|compteur:compt1 ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; n              ; 16    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: timer:timer1|comparateur:compa1 ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; n              ; 16    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: timer:timer1|comparateur:compa2 ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; n              ; 16    ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "edge_detector:edge_detector_1" ;
++-------+-------+----------+--------------------------------+
+; Port  ; Type  ; Severity ; Details                        ;
++-------+-------+----------+--------------------------------+
+; reset ; Input ; Info     ; Stuck at GND                   ;
++-------+-------+----------+--------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "timer:timer1|comparateur:compa2"                                                                     ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                             ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; sortie_comparaison[2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "timer:timer1|comparateur:compa1"                                                                        ;
++--------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                     ; Type   ; Severity ; Details                                                                             ;
++--------------------------+--------+----------+-------------------------------------------------------------------------------------+
+; sortie_comparaison[1..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: compteur:U1 ;
-+----------------+-------+---------------------------------+
-; Parameter Name ; Value ; Type                            ;
-+----------------+-------+---------------------------------+
-; n              ; 3     ; Signed Integer                  ;
-+----------------+-------+---------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+; Port Connectivity Checks: "timer:timer1|compteur:compt1" ;
++--------+-------+----------+------------------------------+
+; Port   ; Type  ; Severity ; Details                      ;
++--------+-------+----------+------------------------------+
+; arst_n ; Input ; Info     ; Stuck at VCC                 ;
++--------+-------+----------+------------------------------+
 
 
-+-------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: comparateur:J1 ;
-+----------------+-------+------------------------------------+
-; Parameter Name ; Value ; Type                               ;
-+----------------+-------+------------------------------------+
-; n              ; 3     ; Signed Integer                     ;
-+----------------+-------+------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
++---------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "timer:timer1|diviseur:div|comparateur:J1"                                                            ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port                  ; Type   ; Severity ; Details                                                                             ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
+; sortie_comparaison[0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+------------------------------------------+
-; Port Connectivity Checks: "compteur:U1"  ;
-+--------+-------+----------+--------------+
-; Port   ; Type  ; Severity ; Details      ;
-+--------+-------+----------+--------------+
-; en     ; Input ; Info     ; Stuck at VCC ;
-; arst_n ; Input ; Info     ; Stuck at VCC ;
-+--------+-------+----------+--------------+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "timer:timer1|diviseur:div|compteur:U1" ;
++--------+-------+----------+---------------------------------------+
+; Port   ; Type  ; Severity ; Details                               ;
++--------+-------+----------+---------------------------------------+
+; arst_n ; Input ; Info     ; Stuck at VCC                          ;
++--------+-------+----------+---------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "timer:timer1"                                                                                    ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port              ; Type   ; Severity ; Details                                                                             ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+; enable_pwm        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; prescaler[10..8]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; prescaler[3..0]   ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; prescaler[15..14] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; prescaler[12..11] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; prescaler[7..4]   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; prescaler[13]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; autoreload[8..4]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; autoreload[1..0]  ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; autoreload[15..9] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; autoreload[3..2]  ; Input  ; Info     ; Stuck at GND                                                                        ;
+; capture_compare   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; pwm_output        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; tim_counter       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "compteur:compt1" ;
++--------+-------+----------+-----------------+
+; Port   ; Type  ; Severity ; Details         ;
++--------+-------+----------+-----------------+
+; arst_n ; Input ; Info     ; Stuck at VCC    ;
++--------+-------+----------+-----------------+
 
 
 +-----------------------------------------------------+
@@ -295,17 +461,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 9                           ;
-; cycloneiii_ff         ; 3                           ;
-;     plain             ; 3                           ;
-; cycloneiii_lcell_comb ; 12                          ;
-;     normal            ; 12                          ;
-;         0 data inputs ; 1                           ;
-;         3 data inputs ; 5                           ;
-;         4 data inputs ; 6                           ;
+; arriav_ff             ; 63                          ;
+;     ENA SCLR          ; 16                          ;
+;     SCLR              ; 24                          ;
+;     plain             ; 23                          ;
+; arriav_lcell_comb     ; 76                          ;
+;     arith             ; 40                          ;
+;         1 data inputs ; 38                          ;
+;         2 data inputs ; 2                           ;
+;     normal            ; 36                          ;
+;         1 data inputs ; 1                           ;
+;         2 data inputs ; 6                           ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 5                           ;
+;         5 data inputs ; 8                           ;
+;         6 data inputs ; 10                          ;
+; boundary_port         ; 14                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 2.27                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.56                        ;
 +-----------------------+-----------------------------+
 
 
@@ -314,7 +488,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:03     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -324,187 +498,59 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Sep 30 10:42:47 2021
+    Info: Processing started: Thu Nov 18 23:43:39 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projet_vhdl -c projet_vhdl
+Warning (125092): Tcl Script File nios/nios_mcu/synthesis/nios_mcu.qip not found
+    Info (125063): set_global_assignment -name QIP_FILE nios/nios_mcu/synthesis/nios_mcu.qip
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/functions/FPGA/anemometre.vhd
+    Info (12022): Found design unit 1: anemometre-anemometre_oc File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/functions/FPGA/anemometre.vhd Line: 122
+    Info (12023): Found entity 1: anemometre File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/functions/FPGA/anemometre.vhd Line: 26
+Info (12021): Found 2 design units, including 1 entities, in source file components/edge_detector.vhd
+    Info (12022): Found design unit 1: edge_detector-custom_arc File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/edge_detector.vhd Line: 14
+    Info (12023): Found entity 1: edge_detector File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/edge_detector.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file components/timer.vhd
+    Info (12022): Found design unit 1: timer-rtl File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/timer.vhd Line: 38
+    Info (12023): Found entity 1: timer File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/timer.vhd Line: 14
 Info (12021): Found 2 design units, including 1 entities, in source file components/bascule.vhd
-    Info (12022): Found design unit 1: BasculeD-rtl File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/components/bascule.vhd Line: 19
-    Info (12023): Found entity 1: BasculeD File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/components/bascule.vhd Line: 8
+    Info (12022): Found design unit 1: BasculeD-rtl File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/bascule.vhd Line: 19
+    Info (12023): Found entity 1: BasculeD File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/bascule.vhd Line: 8
 Info (12021): Found 2 design units, including 1 entities, in source file components/compteur.vhd
-    Info (12022): Found design unit 1: compteur-rtl File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/components/compteur.vhd Line: 14
-    Info (12023): Found entity 1: compteur File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/components/compteur.vhd Line: 6
-Info (12021): Found 2 design units, including 1 entities, in source file nios/nios_mcu/synthesis/nios_mcu.vhd
-    Info (12022): Found design unit 1: nios_mcu-rtl File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/nios_mcu.vhd Line: 17
-    Info (12023): Found entity 1: nios_mcu File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/nios_mcu.vhd Line: 9
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/altera_reset_controller.v
-    Info (12023): Found entity 1: altera_reset_controller File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/altera_reset_controller.v Line: 42
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/altera_reset_synchronizer.v
-    Info (12023): Found entity 1: altera_reset_synchronizer File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/altera_reset_synchronizer.v Line: 24
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_irq_mapper.sv
-    Info (12023): Found entity 1: nios_mcu_irq_mapper File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_irq_mapper.sv Line: 31
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0.v
-    Info (12023): Found entity 1: nios_mcu_mm_interconnect_0 File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0.v Line: 9
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_avalon_st_adapter.v
-    Info (12023): Found entity 1: nios_mcu_mm_interconnect_0_avalon_st_adapter File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_avalon_st_adapter.v Line: 9
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
-    Info (12023): Found entity 1: nios_mcu_mm_interconnect_0_avalon_st_adapter_error_adapter_0 File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv Line: 66
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_rsp_mux_001.sv
-    Info (12023): Found entity 1: nios_mcu_mm_interconnect_0_rsp_mux_001 File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_rsp_mux_001.sv Line: 51
-Info (12021): Found 2 design units, including 2 entities, in source file nios/nios_mcu/synthesis/submodules/altera_merlin_arbitrator.sv
-    Info (12023): Found entity 1: altera_merlin_arbitrator File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/altera_merlin_arbitrator.sv Line: 103
-    Info (12023): Found entity 2: altera_merlin_arb_adder File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/altera_merlin_arbitrator.sv Line: 228
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_rsp_mux.sv
-    Info (12023): Found entity 1: nios_mcu_mm_interconnect_0_rsp_mux File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_rsp_mux.sv Line: 51
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_rsp_demux.sv
-    Info (12023): Found entity 1: nios_mcu_mm_interconnect_0_rsp_demux File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_rsp_demux.sv Line: 43
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_cmd_mux_002.sv
-    Info (12023): Found entity 1: nios_mcu_mm_interconnect_0_cmd_mux_002 File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_cmd_mux_002.sv Line: 51
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_cmd_mux.sv
-    Info (12023): Found entity 1: nios_mcu_mm_interconnect_0_cmd_mux File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_cmd_mux.sv Line: 51
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_cmd_demux_001.sv
-    Info (12023): Found entity 1: nios_mcu_mm_interconnect_0_cmd_demux_001 File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_cmd_demux_001.sv Line: 43
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_cmd_demux.sv
-    Info (12023): Found entity 1: nios_mcu_mm_interconnect_0_cmd_demux File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_cmd_demux.sv Line: 43
-Info (12021): Found 2 design units, including 2 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_router_007.sv
-    Info (12023): Found entity 1: nios_mcu_mm_interconnect_0_router_007_default_decode File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_router_007.sv Line: 45
-    Info (12023): Found entity 2: nios_mcu_mm_interconnect_0_router_007 File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_router_007.sv Line: 84
-Info (12021): Found 2 design units, including 2 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_router_004.sv
-    Info (12023): Found entity 1: nios_mcu_mm_interconnect_0_router_004_default_decode File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_router_004.sv Line: 45
-    Info (12023): Found entity 2: nios_mcu_mm_interconnect_0_router_004 File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_router_004.sv Line: 84
-Info (12021): Found 2 design units, including 2 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_router_002.sv
-    Info (12023): Found entity 1: nios_mcu_mm_interconnect_0_router_002_default_decode File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_router_002.sv Line: 45
-    Info (12023): Found entity 2: nios_mcu_mm_interconnect_0_router_002 File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_router_002.sv Line: 84
-Info (12021): Found 2 design units, including 2 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_router_001.sv
-    Info (12023): Found entity 1: nios_mcu_mm_interconnect_0_router_001_default_decode File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_router_001.sv Line: 45
-    Info (12023): Found entity 2: nios_mcu_mm_interconnect_0_router_001 File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_router_001.sv Line: 84
-Info (12021): Found 2 design units, including 2 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_router.sv
-    Info (12023): Found entity 1: nios_mcu_mm_interconnect_0_router_default_decode File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_router.sv Line: 45
-    Info (12023): Found entity 2: nios_mcu_mm_interconnect_0_router File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_mm_interconnect_0_router.sv Line: 84
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/altera_avalon_sc_fifo.v
-    Info (12023): Found entity 1: altera_avalon_sc_fifo File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/altera_avalon_sc_fifo.v Line: 21
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/altera_merlin_slave_agent.sv
-    Info (12023): Found entity 1: altera_merlin_slave_agent File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/altera_merlin_slave_agent.sv Line: 34
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/altera_merlin_burst_uncompressor.sv
-    Info (12023): Found entity 1: altera_merlin_burst_uncompressor File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/altera_merlin_burst_uncompressor.sv Line: 40
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/altera_merlin_master_agent.sv
-    Info (12023): Found entity 1: altera_merlin_master_agent File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/altera_merlin_master_agent.sv Line: 28
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/altera_merlin_slave_translator.sv
-    Info (12023): Found entity 1: altera_merlin_slave_translator File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/altera_merlin_slave_translator.sv Line: 35
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/altera_merlin_master_translator.sv
-    Info (12023): Found entity 1: altera_merlin_master_translator File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/altera_merlin_master_translator.sv Line: 32
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_pio_0.v
-    Info (12023): Found entity 1: nios_mcu_pio_0 File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_pio_0.v Line: 21
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_onchip_ram.v
-    Info (12023): Found entity 1: nios_mcu_onchip_ram File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_onchip_ram.v Line: 21
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu.v
-    Info (12023): Found entity 1: nios_mcu_nios_cpu File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu.v Line: 9
-Info (12021): Found 21 design units, including 21 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu.v
-    Info (12023): Found entity 1: nios_mcu_nios_cpu_cpu_register_bank_a_module File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu.v Line: 21
-    Info (12023): Found entity 2: nios_mcu_nios_cpu_cpu_register_bank_b_module File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu.v Line: 87
-    Info (12023): Found entity 3: nios_mcu_nios_cpu_cpu_nios2_oci_debug File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu.v Line: 153
-    Info (12023): Found entity 4: nios_mcu_nios_cpu_cpu_nios2_oci_break File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu.v Line: 295
-    Info (12023): Found entity 5: nios_mcu_nios_cpu_cpu_nios2_oci_xbrk File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu.v Line: 588
-    Info (12023): Found entity 6: nios_mcu_nios_cpu_cpu_nios2_oci_dbrk File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu.v Line: 795
-    Info (12023): Found entity 7: nios_mcu_nios_cpu_cpu_nios2_oci_itrace File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu.v Line: 982
-    Info (12023): Found entity 8: nios_mcu_nios_cpu_cpu_nios2_oci_td_mode File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu.v Line: 1115
-    Info (12023): Found entity 9: nios_mcu_nios_cpu_cpu_nios2_oci_dtrace File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu.v Line: 1183
-    Info (12023): Found entity 10: nios_mcu_nios_cpu_cpu_nios2_oci_compute_input_tm_cnt File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu.v Line: 1265
-    Info (12023): Found entity 11: nios_mcu_nios_cpu_cpu_nios2_oci_fifo_wrptr_inc File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu.v Line: 1337
-    Info (12023): Found entity 12: nios_mcu_nios_cpu_cpu_nios2_oci_fifo_cnt_inc File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu.v Line: 1380
-    Info (12023): Found entity 13: nios_mcu_nios_cpu_cpu_nios2_oci_fifo File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu.v Line: 1427
-    Info (12023): Found entity 14: nios_mcu_nios_cpu_cpu_nios2_oci_pib File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu.v Line: 1913
-    Info (12023): Found entity 15: nios_mcu_nios_cpu_cpu_nios2_oci_im File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu.v Line: 1936
-    Info (12023): Found entity 16: nios_mcu_nios_cpu_cpu_nios2_performance_monitors File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu.v Line: 2006
-    Info (12023): Found entity 17: nios_mcu_nios_cpu_cpu_nios2_avalon_reg File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu.v Line: 2023
-    Info (12023): Found entity 18: nios_mcu_nios_cpu_cpu_ociram_sp_ram_module File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu.v Line: 2116
-    Info (12023): Found entity 19: nios_mcu_nios_cpu_cpu_nios2_ocimem File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu.v Line: 2181
-    Info (12023): Found entity 20: nios_mcu_nios_cpu_cpu_nios2_oci File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu.v Line: 2362
-    Info (12023): Found entity 21: nios_mcu_nios_cpu_cpu File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu.v Line: 2834
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu_debug_slave_wrapper.v
-    Info (12023): Found entity 1: nios_mcu_nios_cpu_cpu_debug_slave_wrapper File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu_debug_slave_wrapper.v Line: 21
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu_debug_slave_sysclk.v
-    Info (12023): Found entity 1: nios_mcu_nios_cpu_cpu_debug_slave_sysclk File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu_debug_slave_sysclk.v Line: 21
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu_debug_slave_tck.v
-    Info (12023): Found entity 1: nios_mcu_nios_cpu_cpu_debug_slave_tck File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu_debug_slave_tck.v Line: 21
-Info (12021): Found 1 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu_test_bench.v
-    Info (12023): Found entity 1: nios_mcu_nios_cpu_cpu_test_bench File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_nios_cpu_cpu_test_bench.v Line: 21
-Info (12021): Found 5 design units, including 5 entities, in source file nios/nios_mcu/synthesis/submodules/nios_mcu_jtag_uart_0.v
-    Info (12023): Found entity 1: nios_mcu_jtag_uart_0_sim_scfifo_w File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_jtag_uart_0.v Line: 21
-    Info (12023): Found entity 2: nios_mcu_jtag_uart_0_scfifo_w File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_jtag_uart_0.v Line: 78
-    Info (12023): Found entity 3: nios_mcu_jtag_uart_0_sim_scfifo_r File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_jtag_uart_0.v Line: 164
-    Info (12023): Found entity 4: nios_mcu_jtag_uart_0_scfifo_r File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_jtag_uart_0.v Line: 243
-    Info (12023): Found entity 5: nios_mcu_jtag_uart_0 File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/nios_mcu_jtag_uart_0.v Line: 331
-Info (12021): Found 2 design units, including 1 entities, in source file nios/nios_mcu/synthesis/submodules/AvalonSlave.vhd
-    Info (12022): Found design unit 1: AvalonSlave-rtl File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/AvalonSlave.vhd Line: 32
-    Info (12023): Found entity 1: AvalonSlave File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/nios/nios_mcu/synthesis/submodules/AvalonSlave.vhd Line: 18
+    Info (12022): Found design unit 1: compteur-rtl File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/compteur.vhd Line: 21
+    Info (12023): Found entity 1: compteur File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/compteur.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file src/AvalonSlave.vhd
-    Info (12022): Found design unit 1: AvalonSlave-rtl File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/src/AvalonSlave.vhd Line: 32
-    Info (12023): Found entity 1: AvalonSlave File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/src/AvalonSlave.vhd Line: 18
+    Info (12022): Found design unit 1: AvalonSlave-rtl File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/src/AvalonSlave.vhd Line: 32
+    Info (12023): Found entity 1: AvalonSlave File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/src/AvalonSlave.vhd Line: 18
 Info (12021): Found 2 design units, including 1 entities, in source file components/comparateur.vhd
-    Info (12022): Found design unit 1: comparateur-rtl File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/components/comparateur.vhd Line: 16
-    Info (12023): Found entity 1: comparateur File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/components/comparateur.vhd Line: 5
+    Info (12022): Found design unit 1: comparateur-rtl File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/comparateur.vhd Line: 16
+    Info (12023): Found entity 1: comparateur File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/comparateur.vhd Line: 5
 Info (12021): Found 0 design units, including 0 entities, in source file src/projet_vhdl.vhd
 Info (12021): Found 2 design units, including 1 entities, in source file components/diviseur.vhd
-    Info (12022): Found design unit 1: diviseur-rtl File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/components/diviseur.vhd Line: 21
-    Info (12023): Found entity 1: diviseur File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/components/diviseur.vhd Line: 7
-Info (12127): Elaborating entity "diviseur" for the top level hierarchy
-Info (12128): Elaborating entity "compteur" for hierarchy "compteur:U1" File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/components/diviseur.vhd Line: 59
-Info (12128): Elaborating entity "comparateur" for hierarchy "comparateur:J1" File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/components/diviseur.vhd Line: 63
-Warning (10631): VHDL Process Statement warning at comparateur.vhd(20): inferring latch(es) for signal or variable "sortie_comparaison", which holds its previous value in one or more paths through the process File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/components/comparateur.vhd Line: 20
-Info (10041): Inferred latch for "sortie_comparaison[0]" at comparateur.vhd(20) File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/components/comparateur.vhd Line: 20
-Info (10041): Inferred latch for "sortie_comparaison[1]" at comparateur.vhd(20) File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/components/comparateur.vhd Line: 20
-Info (10041): Inferred latch for "sortie_comparaison[2]" at comparateur.vhd(20) File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/components/comparateur.vhd Line: 20
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "GeneralOutput[0]" is stuck at GND File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/components/diviseur.vhd Line: 14
+    Info (12022): Found design unit 1: diviseur-rtl File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/diviseur.vhd Line: 21
+    Info (12023): Found entity 1: diviseur File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/diviseur.vhd Line: 7
+Info (12127): Elaborating entity "anemometre" for the top level hierarchy
+Info (12128): Elaborating entity "compteur" for hierarchy "compteur:compt1" File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/functions/FPGA/anemometre.vhd Line: 184
+Info (12128): Elaborating entity "timer" for hierarchy "timer:timer1" File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/functions/FPGA/anemometre.vhd Line: 193
+Info (12128): Elaborating entity "diviseur" for hierarchy "timer:timer1|diviseur:div" File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/timer.vhd Line: 109
+Info (12128): Elaborating entity "compteur" for hierarchy "timer:timer1|diviseur:div|compteur:U1" File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/diviseur.vhd Line: 67
+Info (12128): Elaborating entity "comparateur" for hierarchy "timer:timer1|diviseur:div|comparateur:J1" File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/diviseur.vhd Line: 78
+Warning (10631): VHDL Process Statement warning at comparateur.vhd(20): inferring latch(es) for signal or variable "sortie_comparaison", which holds its previous value in one or more paths through the process File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/comparateur.vhd Line: 20
+Info (10041): Inferred latch for "sortie_comparaison[0]" at comparateur.vhd(20) File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/comparateur.vhd Line: 20
+Info (10041): Inferred latch for "sortie_comparaison[1]" at comparateur.vhd(20) File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/comparateur.vhd Line: 20
+Info (10041): Inferred latch for "sortie_comparaison[2]" at comparateur.vhd(20) File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/comparateur.vhd Line: 20
+Info (12128): Elaborating entity "edge_detector" for hierarchy "edge_detector:edge_detector_1" File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/functions/FPGA/anemometre.vhd Line: 208
 Info (286030): Timing-Driven Synthesis is running
-Warning (20013): Ignored 23 assignments for entity "altera_avalon_sc_fifo" -- entity does not exist in design
-Warning (20013): Ignored 64 assignments for entity "altera_merlin_master_agent" -- entity does not exist in design
-Warning (20013): Ignored 55 assignments for entity "altera_merlin_master_translator" -- entity does not exist in design
-Warning (20013): Ignored 53 assignments for entity "altera_merlin_slave_agent" -- entity does not exist in design
-Warning (20013): Ignored 68 assignments for entity "altera_merlin_slave_translator" -- entity does not exist in design
-Warning (20013): Ignored 35 assignments for entity "altera_reset_controller" -- entity does not exist in design
-Warning (20013): Ignored 19 assignments for entity "nios_mcu" -- entity does not exist in design
-Warning (20013): Ignored 14 assignments for entity "nios_mcu_irq_mapper" -- entity does not exist in design
-Warning (20013): Ignored 24 assignments for entity "nios_mcu_jtag_uart_0" -- entity does not exist in design
-Warning (20013): Ignored 12 assignments for entity "nios_mcu_mm_interconnect_0" -- entity does not exist in design
-Warning (20013): Ignored 32 assignments for entity "nios_mcu_mm_interconnect_0_avalon_st_adapter" -- entity does not exist in design
-Warning (20013): Ignored 19 assignments for entity "nios_mcu_mm_interconnect_0_avalon_st_adapter_error_adapter_0" -- entity does not exist in design
-Warning (20013): Ignored 17 assignments for entity "nios_mcu_mm_interconnect_0_cmd_demux" -- entity does not exist in design
-Warning (20013): Ignored 17 assignments for entity "nios_mcu_mm_interconnect_0_cmd_demux_001" -- entity does not exist in design
-Warning (20013): Ignored 19 assignments for entity "nios_mcu_mm_interconnect_0_cmd_mux" -- entity does not exist in design
-Warning (20013): Ignored 19 assignments for entity "nios_mcu_mm_interconnect_0_cmd_mux_002" -- entity does not exist in design
-Warning (20013): Ignored 36 assignments for entity "nios_mcu_mm_interconnect_0_router" -- entity does not exist in design
-Warning (20013): Ignored 36 assignments for entity "nios_mcu_mm_interconnect_0_router_001" -- entity does not exist in design
-Warning (20013): Ignored 36 assignments for entity "nios_mcu_mm_interconnect_0_router_002" -- entity does not exist in design
-Warning (20013): Ignored 36 assignments for entity "nios_mcu_mm_interconnect_0_router_004" -- entity does not exist in design
-Warning (20013): Ignored 36 assignments for entity "nios_mcu_mm_interconnect_0_router_007" -- entity does not exist in design
-Warning (20013): Ignored 17 assignments for entity "nios_mcu_mm_interconnect_0_rsp_demux" -- entity does not exist in design
-Warning (20013): Ignored 19 assignments for entity "nios_mcu_mm_interconnect_0_rsp_mux" -- entity does not exist in design
-Warning (20013): Ignored 19 assignments for entity "nios_mcu_mm_interconnect_0_rsp_mux_001" -- entity does not exist in design
-Warning (20013): Ignored 149 assignments for entity "nios_mcu_nios_cpu" -- entity does not exist in design
-Warning (20013): Ignored 179 assignments for entity "nios_mcu_nios_cpu_cpu" -- entity does not exist in design
-Warning (20013): Ignored 40 assignments for entity "nios_mcu_onchip_ram" -- entity does not exist in design
-Warning (20013): Ignored 22 assignments for entity "nios_mcu_pio_0" -- entity does not exist in design
-Info (144001): Generated suppressed messages file /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/output_files/projet_vhdl.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "Enable" File: /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/components/diviseur.vhd Line: 12
-Info (21057): Implemented 20 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 3 output pins
-    Info (21061): Implemented 11 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
-    Info: Peak virtual memory: 949 megabytes
-    Info: Processing ended: Thu Sep 30 10:43:53 2021
-    Info: Elapsed time: 00:01:06
-    Info: Total CPU time (on all processors): 00:02:23
-
-
-+------------------------------------------+
-; Analysis & Synthesis Suppressed Messages ;
-+------------------------------------------+
-The suppressed messages can be found in /home/lepetitprince/Seafile/Education/Fac/M2_SME/VHDL/projet_vhdl/output_files/projet_vhdl.map.smsg.
+Info (21057): Implemented 108 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 5 input pins
+    Info (21059): Implemented 9 output pins
+    Info (21061): Implemented 94 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 1031 megabytes
+    Info: Processing ended: Thu Nov 18 23:43:54 2021
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:32
 
 

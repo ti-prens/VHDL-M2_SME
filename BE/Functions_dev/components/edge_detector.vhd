@@ -1,38 +1,34 @@
---Mouloud ZIANE & Prince Jacquet
+--Mouloud ZIANE & Prince JACQUET
 --M2 SME
 Library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
-entity edge_detect is
+entity edge_detector is --only detect rising edge
 	port(
 		clk, f_in : in std_logic;
-		reset : out std_logic);
-end edge_detect;
+		reset : in std_logic;
+		detected_edge : out std_logic);
+end edge_detector;
 
-architecture arc of edge_detect is
-	signal etat : std_logic_vector (1 downto 0) := "00";
+architecture custom_arc of edge_detector is
+	signal f_in_d : std_logic := '0';
 begin 
 	process(clk) is
 	begin	
 		if rising_edge(clk) then
-			if etat = "00" then
-				if f_in = '1' then
-					etat <= "11";
-					reset <= '1';
-				end if;
-			end if;
-			if etat = "11" then
-				etat <= "10";
-				reset <= '0';
-			end if;
-			if etat = "10" then
-				if f_in = '0' then
-					etat <= "00";
-					reset <= '0';
-				end if;
+		f_in_d <= f_in;
+
+			if reset = '1' then 
+				detected_edge <= '0';
+
+			elsif f_in_d = '0' and f_in = '1' then 
+				detected_edge <= '1';
+			
+			else
+				detected_edge <= '0';
 			end if;
 		end if;
 	end process;
 
-end arc;
+end custom_arc;
