@@ -1,17 +1,14 @@
-Analysis & Synthesis Status : Successful - Thu Nov 18 23:43:54 2021
+Analysis & Synthesis Status : Successful - Mon Nov 22 11:02:25 2021
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : projet_vhdl
 Top-level Entity Name : anemometre
-Family : Cyclone V
-Logic utilization (in ALMs) : N/A
-Total registers : 63
+Family : Cyclone IV E
+Total logic elements : 1,004
+    Total combinational functions : 616
+    Dedicated logic registers : 756
+Total registers : 756
 Total pins : 14
 Total virtual pins : 0
-Total block memory bits : 0
-Total DSP Blocks : 0
-Total HSSI RX PCSs : 0
-Total HSSI PMA RX Deserializers : 0
-Total HSSI TX PCSs : 0
-Total HSSI PMA TX Serializers : 0
+Total memory bits : 22,528
+Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0
-Total DLLs : 0

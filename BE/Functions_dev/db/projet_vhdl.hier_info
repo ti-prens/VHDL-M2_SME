@@ -1,27 +1,36 @@
 |anemometre
-clk_50M => compteur:compt1.clk
+clk_50M => compteur:compt_front.clk
+clk_50M => data_valid~reg0.CLK
+clk_50M => data_anemometre[0]~reg0.CLK
+clk_50M => data_anemometre[1]~reg0.CLK
+clk_50M => data_anemometre[2]~reg0.CLK
+clk_50M => data_anemometre[3]~reg0.CLK
+clk_50M => data_anemometre[4]~reg0.CLK
+clk_50M => data_anemometre[5]~reg0.CLK
+clk_50M => data_anemometre[6]~reg0.CLK
+clk_50M => data_anemometre[7]~reg0.CLK
 clk_50M => timer_enable.CLK
 clk_50M => internal_reset.CLK
-clk_50M => timer:timer1.Clock
+clk_50M => timer:timer_1hz.Clock
 clk_50M => edge_detector:edge_detector_1.clk
 in_freq_anemometre => edge_detector:edge_detector_1.f_in
-reset_n => internal_reset.DATAIN
-continu => timer_enable.OUTPUTSELECT
-continu => data_valid.IN1
-continu => pReset.IN1
-start_stop => data_valid.OUTPUTSELECT
-data_valid <= data_valid.DB_MAX_OUTPUT_PORT_TYPE
-data_anemometre[0] << compteur:compt1.counter_output[0]
-data_anemometre[1] << compteur:compt1.counter_output[1]
-data_anemometre[2] << compteur:compt1.counter_output[2]
-data_anemometre[3] << compteur:compt1.counter_output[3]
-data_anemometre[4] << compteur:compt1.counter_output[4]
-data_anemometre[5] << compteur:compt1.counter_output[5]
-data_anemometre[6] << compteur:compt1.counter_output[6]
-data_anemometre[7] << compteur:compt1.counter_output[7]
+reset_n => internal_reset.DATAA
+continu => pEvent.IN1
+continu => pEvent.IN1
+continu => pEvent.IN0
+start_stop => pEvent.IN1
+data_valid <= data_valid~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_anemometre[0] << data_anemometre[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_anemometre[1] << data_anemometre[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_anemometre[2] << data_anemometre[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_anemometre[3] << data_anemometre[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_anemometre[4] << data_anemometre[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_anemometre[5] << data_anemometre[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_anemometre[6] << data_anemometre[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+data_anemometre[7] << data_anemometre[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|anemometre|compteur:compt1
+|anemometre|compteur:compt_front
 clk => count[0].CLK
 clk => count[1].CLK
 clk => count[2].CLK
@@ -64,7 +73,7 @@ counter_output[6] <= count[6].DB_MAX_OUTPUT_PORT_TYPE
 counter_output[7] <= count[7].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|anemometre|timer:timer1
+|anemometre|timer:timer_1hz
 Clock => diviseur:div.Clock
 Clock => Reset_div.CLK
 Clock => SRst_compt1.CLK
@@ -158,7 +167,7 @@ tim_counter[14] <= compteur:compt1.counter_output[14]
 tim_counter[15] <= compteur:compt1.counter_output[15]
 
 
-|anemometre|timer:timer1|diviseur:div
+|anemometre|timer:timer_1hz|diviseur:div
 Clock => compteur:U1.clk
 Enable => compteur:U1.en
 Reset => reset_synchrone.IN1
@@ -181,7 +190,7 @@ Prescaler[15] => Add0.IN17
 DivOutput <= comparateur:J1.sortie_comparaison[1]
 
 
-|anemometre|timer:timer1|diviseur:div|compteur:U1
+|anemometre|timer:timer_1hz|diviseur:div|compteur:U1
 clk => count[0].CLK
 clk => count[1].CLK
 clk => count[2].CLK
@@ -264,7 +273,7 @@ counter_output[14] <= count[14].DB_MAX_OUTPUT_PORT_TYPE
 counter_output[15] <= count[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|anemometre|timer:timer1|diviseur:div|comparateur:J1
+|anemometre|timer:timer_1hz|diviseur:div|comparateur:J1
 valeur_a[0] => Equal0.IN15
 valeur_a[0] => LessThan0.IN16
 valeur_a[0] => LessThan1.IN16
@@ -366,7 +375,7 @@ sortie_comparaison[1] <= sortie_comparaison[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
 sortie_comparaison[2] <= sortie_comparaison[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|anemometre|timer:timer1|compteur:compt1
+|anemometre|timer:timer_1hz|compteur:compt1
 clk => count[0].CLK
 clk => count[1].CLK
 clk => count[2].CLK
@@ -449,7 +458,7 @@ counter_output[14] <= count[14].DB_MAX_OUTPUT_PORT_TYPE
 counter_output[15] <= count[15].DB_MAX_OUTPUT_PORT_TYPE
 
 
-|anemometre|timer:timer1|comparateur:compa1
+|anemometre|timer:timer_1hz|comparateur:compa1
 valeur_a[0] => Equal0.IN15
 valeur_a[0] => LessThan0.IN16
 valeur_a[0] => LessThan1.IN16
@@ -551,7 +560,7 @@ sortie_comparaison[1] <= sortie_comparaison[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
 sortie_comparaison[2] <= sortie_comparaison[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|anemometre|timer:timer1|comparateur:compa2
+|anemometre|timer:timer_1hz|comparateur:compa2
 valeur_a[0] => Equal0.IN15
 valeur_a[0] => LessThan0.IN16
 valeur_a[0] => LessThan1.IN16
