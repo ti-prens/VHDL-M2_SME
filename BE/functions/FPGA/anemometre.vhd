@@ -120,8 +120,8 @@ begin
 			Enable          => timer_enable,
 			Reset           => internal_reset,
 			Enable_PWM      => '0',
-			Prescaler       => x"0063", --x"270F", --(10000 - 1) = 9999 = 0x270F               
-			Autoreload      => x"0018", --(500 - 1)  = 499 = 0x1F3               
+			Prescaler       => x"270F", --x"270F", --(10000 - 1) = 9999 = 0x270F               
+			Autoreload      => x"1387", --(500 - 1)  = 499 = 0x1F3 (passer de ARR 500 à 5000)               
 			Capture_Compare => x"0000",
 			coUEV           => second,
 			PWM_output      => open,
@@ -150,7 +150,7 @@ begin
 				internal_reset <= not reset_n ;
 			end if;
 
-			if ((continu = '1') or (continu = '0' and start_stop = '1' ))then
+			if ((continu = '1' ) or (continu = '0' and start_stop = '1' ))then
 				timer_enable <= '1';
 			elsif second = '1' and continu = '0' then
 				timer_enable <= '0';
@@ -181,10 +181,11 @@ begin
 	end process pOutput;
 
 
-	sortie_data_valid <= '0' when continu = '0' and start_stop = '0' else
-		'1' when continu = '0' and second = '1' else
-		'1' when continu = '1' and second = '1' else
-		'0'; --timer must be disable when continu = '0'
+	sortie_data_valid <= '1' when second = '1' else '0';	
+		--'0' when continu = '0' and start_stop = '0' else
+		--'1' when continu = '1' and second = '1' else
+		--'1' when continu = '0' and second = '1' else
+		--timer must be disable when continu = '0'
 
 
 	--data_anemometre <= counter;
