@@ -1,0 +1,10 @@
+11:23:12 **** Build of configuration Nios II for project be_vhdl_c ****
+make all 
+Info: Building ../be_vhdl_c_bsp/
+make --no-print-directory -C ../be_vhdl_c_bsp/
+Makefile:533: Warning: SOPC File ../../nios_mcu.sopcinfo could not be found.
+[BSP build complete]
+[be_vhdl_c build complete]
+
+11:23:12 Build Finished (took 219ms)
+

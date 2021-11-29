@@ -1,12 +1,12 @@
-# system info nios_mcu on 2021.09.20.11:45:07
+# system info nios_mcu on 2021.11.25.10:15:37
 system_info:
 name,value
 DEVICE,EP4CE22F17C6
 DEVICE_FAMILY,Cyclone IV E
-GENERATION_ID,1632131086
+GENERATION_ID,1637831727
 #
 #
-# Files generated for nios_mcu on 2021.09.20.11:45:07
+# Files generated for nios_mcu on 2021.11.25.10:15:37
 files:
 filepath,kind,attributes,module,is_top
 simulation/nios_mcu.vhd,VHDL,,nios_mcu,true

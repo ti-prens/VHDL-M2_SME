@@ -1,0 +1,9 @@
+11:49:00 **** Incremental Build of configuration Nios II for project new_nios_mcu ****
+make all 
+Info: Building ../new_nios_mcu_bsp/
+make --no-print-directory -C ../new_nios_mcu_bsp/
+[BSP build complete]
+[new_nios_mcu build complete]
+
+11:49:00 Build Finished (took 244ms)
+

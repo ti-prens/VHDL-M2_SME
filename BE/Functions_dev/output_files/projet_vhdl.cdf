@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE22F17) Path("C:/Users/zimou/Documents/GitHub/VHDL-M2_SME/BE/Functions_dev/output_files/") File("projet_vhdl.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE22F17) Path("/home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/output_files/") File("projet_vhdl.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 
