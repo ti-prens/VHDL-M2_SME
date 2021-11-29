@@ -1,0 +1,22 @@
+
+--*********************************************************************
+-- M2 SME 2021/2022
+-- Boukah & Ziane & Jacquet
+--*********************************************************************
+--          module gestion des boutons poussoirs 
+--********************************************************************
+-- entrées: BP_Babord,BP_Tribord, BP_STBY, clk, reset_n
+-- sorties: codeFonction, ledBabord, ledTribord,ledSTBY, out_bip
+--**********************************************************************
+--clk: horloge à 50MHz
+-- reset_n: actif à 0 => initialise le circuit
+-- valeurs de codeFonction:
+-- =0000: pas d'action, 
+-- =0001: mode manuel action vérin babord
+-- =0010: mode manuel action vérin tribord
+-- =0011: mode pilote automatique/cap
+-- =0100: incrément de 1° consigne de cap
+-- =0101: incrément de 10° consigne de cap
+-- =0111: décrément de 1° consigne de cap
+-- =0110: décrément de 10° consigne de cap
+--*********************************************************************
