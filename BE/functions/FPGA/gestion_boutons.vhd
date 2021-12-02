@@ -26,8 +26,11 @@ USE ieee.std_logic_arith.all;
 
 ENTITY gestion_boutton IS
 	PORT (
-			clk, reset_n: in std_logic;
-	        BP_Babord,BP_Tribord, BP_STBY  : in std_logic;  
+			 clk_50M: in std_logic;
+			 reset_n: in std_logic;
+	         BP_Babord: in std_logic;
+			 BP_Tribord : in std_logic;
+			 BP_STBY  : in std_logic;  
 			--ledBabord, ledTribord,ledSTBY, out_bip : out std_logic
 			out_bip : out std_logic		  
 		  );
@@ -37,13 +40,44 @@ ARCHITECTURE arch_gestion_boutton OF gestion_boutton IS
 signal fin_tempo, val_tempo, val_bip, fin_bip, bip_simple, bip_double: std_logic;
 signal codeFonction: std_logic_vector (3 downto 0);
 
+	--------------------------------------------------------------------------------
+	-- declaration des composants
 
+	component timer
+		generic (
+			P : integer := 16 --taille Prescaler
+		);
+		port (
+			Clock, Enable, Reset : in  std_logic;
+			Enable_PWM           : in  std_logic;
+			Prescaler            : in  std_logic_vector(P-1 downto 0); --prescaler == (PSC + 1) 
+			Autoreload           : in  std_logic_vector(P-1 downto 0); --autoreload == (ARR + 1)
+			Capture_Compare      : in  std_logic_vector (P-1 downto 0);
+			coUEV                : out std_logic; --counter overflow update event
+			PWM_output           : out std_logic;
+			tim_counter          : out std_logic_vector(P-1 downto 0)
+		);
+	end component timer;
 
 begin
+
+		timer_100hz : timer generic map (P => 16) --a fixer a 100hz
+		port map(
+			Clock           => clk_50M,
+			Enable          => timer_enable,
+			Reset           => internal_reset,
+			Enable_PWM      => '0',
+			Prescaler       => x"0064", --100 valeur calculé               
+			Autoreload      => x"1387", -- 5000 c'est une valeur fixé              
+			Capture_Compare => x"0000",
+			coUEV           => Clk100en,
+			PWM_output      => open,
+			tim_counter     => open
+		);
 	--********************************************************************
 --state machine bouton poussoir
 --************************************************************************
-gestion_bp:process (raz_n, clk)
+gestion_bp:process (raz_n, Clk100en)
 --Avec cette horloge le signal va tres vite, on ne peut  pas  voir tout
 --FIXEME
 --Idée c'est d'utiliser un génerateur d'impulsion tt les seconds, ce que genere un signal à 20 ns
@@ -52,7 +86,7 @@ begin
 	if raz_n ='0' then
 	state:= s0;
 	codeFonction <="0000";
-	elsif rising_edge(clk) then
+	elsif Clk100en'event and Clk100en='1' then
 	case state is
 		when s0 =>
 		if BP_Babord='0' then 
