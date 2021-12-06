@@ -26,19 +26,28 @@ USE ieee.std_logic_arith.all;
 
 ENTITY gestion_boutton IS
 	PORT (
-			 clk_50M: in std_logic;
-			 reset_n: in std_logic;
-	         BP_Babord: in std_logic;
-			 BP_Tribord : in std_logic;
-			 BP_STBY  : in std_logic;  
+			 clk_50M		: in std_logic;
+			 reset_n		: in std_logic;
+	         BP_Babord		: in std_logic;
+			 BP_Tribord		: in std_logic;
+			 BP_STBY  		: in std_logic;  
 			--ledBabord, ledTribord,ledSTBY, out_bip : out std_logic
-			out_bip : out std_logic		  
+			out_bip			: out std_logic		  
 		  );
 END gestion_boutton  ;
 
 ARCHITECTURE arch_gestion_boutton OF gestion_boutton IS
-signal fin_tempo, val_tempo, val_bip, fin_bip, bip_simple, bip_double: std_logic;
-signal codeFonction: std_logic_vector (3 downto 0);
+signal raz_n    : std_logic;
+signal internal_reset    : std_logic;
+signal timer_enable      : std_logic := '1';
+signal Clk100en          : std_logic;
+signal fin_tempo		 : std_logic;
+signal val_tempo		 : std_logic;
+signal val_bip			 : std_logic;
+signal fin_bip      	 : std_logic;
+signal bip_simple		 : std_logic; 
+signal bip_double        : std_logic;
+signal codeFonction      : std_logic_vector (3 downto 0);
 
 	--------------------------------------------------------------------------------
 	-- declaration des composants
@@ -59,6 +68,7 @@ signal codeFonction: std_logic_vector (3 downto 0);
 		);
 	end component timer;
 
+-- description de l'architecture
 begin
 
 		timer_100hz : timer generic map (P => 16) --a fixer a 100hz
@@ -74,92 +84,114 @@ begin
 			PWM_output      => open,
 			tim_counter     => open
 		);
+
 	--********************************************************************
---state machine bouton poussoir
+--State machine bouton poussoir
 --************************************************************************
 gestion_bp:process (raz_n, Clk100en)
 --Avec cette horloge le signal va tres vite, on ne peut  pas  voir tout
 --FIXEME
 --Idée c'est d'utiliser un génerateur d'impulsion tt les seconds, ce que genere un signal à 20 ns
-variable State : State_button;
+variable State : integer range 0 to 11;
 begin
 	if raz_n ='0' then
-	state:= s0;
+	State:= 0;
 	codeFonction <="0000";
 	elsif Clk100en'event and Clk100en='1' then
-	case state is
-		when s0 =>
+	case State is
+		when 0 =>
 		if BP_Babord='0' then 
-		state:=s1; codeFonction <="0001";
+		State:=1; codeFonction <="0001";
 		end if;
 		if BP_Tribord='0' then 
-		state:=s2; codeFonction <="0010";
+		State:=2; codeFonction <="0010";
 		end if;
 		if BP_STBY='0' then 
-		state:=s3; codeFonction <="0000"; 
+		State:=3; codeFonction <="0000"; 
 		end if;
 		
-	when s1 =>
+	when 1 =>
 		if BP_Babord='1' then 
-		state:=s0; codeFonction <="0000";
+		State:=0; codeFonction <="0000";
 		end if;
-	when s2 =>
+	when 2 =>
 		if BP_Tribord='1' then 
-		state:=s0; codeFonction <="0000";
+		State:=0; codeFonction <="0000";
 		end if;
 		
-	when s3 =>
+	when 3 =>
 		if BP_STBY='1' then 
-		state:=s4; codeFonction <="0011";
+		State:=4; codeFonction <="0011";
 		end if;
 		
-	when s4 =>
+	when 4 =>
 		if BP_STBY='0' then 
-		state:=s5; -- pas d'action
+		State:=5; -- pas d'action
 		end if;
 		if BP_Babord='0' then 
-		state:=s6; val_tempo <='1'; -- tempo actif 
+		State:=6; val_tempo <='1'; -- tempo actif 
 		end if;
 		if BP_Tribord='0' then 
-		state:=s9; val_tempo <='1' ;-- tempo actif 
+		State:=9; val_tempo <='1' ;-- tempo actif 
 		end if;
-	when s5 =>
+	when 5 =>
 	if BP_STBY='1' then 
-		state:=s0; codeFonction <="0000";
+		State:=0; codeFonction <="0000";
 		end if;
-	when s6 =>
+	when 6 =>
 	if BP_Babord='0' and fin_tempo='1' then 
-		state:=s7; codeFonction <="0101";val_tempo <='0'; bip_double<='1';
+		State:=7; codeFonction <="0101";val_tempo <='0'; bip_double<='1';
 		end if;
 	if BP_Babord='1' and fin_tempo='0' then 
-		state:=s8; codeFonction <="0100"; val_tempo <='0'; bip_simple<='1';
+		State:=8; codeFonction <="0100"; val_tempo <='0'; bip_simple<='1';
 		end if;
-	when s7 =>
+	when 7 =>
 		if fin_bip='1' then 
-		state:=s4; codeFonction <="0011"; bip_double<='0';
+		State:=4; codeFonction <="0011"; bip_double<='0';
 		end if;
-	when s8 =>
+	when 8 =>
 		if fin_bip='1' then 
-		state:=s4; codeFonction <="0011";bip_simple<='0'; 
+		State:=4; codeFonction <="0011";bip_simple<='0'; 
+		end if;
+	
+
+	when 9 => 
+		if BP_Tribord='0' and fin_tempo='1' then 
+		State:=10; codeFonction <="0110"; val_tempo <='0'; bip_double<='1';
+		end if;
+		
+		if BP_Tribord='1' and fin_tempo='0' then 
+		State:=11; codeFonction <="0111"; val_tempo <='0'; bip_simple<='1';
+		end if;
+
+	when 10 => 
+		if fin_bip='1' then 
+		State:=4; codeFonction <="0011"; bip_double<='0';
+		end if;
+
+	when 11 =>
+		if fin_bip='1' then 
+		State:=4; codeFonction <="0011"; bip_simple<='0';
 		end if;
 	end case;
-
-	when s9 =>
-		if BP_Tribord='0' and fin_tempo='1' then 
-		state:=s10; codeFonction <="0110"; val_tempo <='0'; bip_double<='1';
-		end if;
-		if BP_Tribord='1' and fin_tempo='0' then 
-		state:=s11; codeFonction <="0111"; val_tempo <='0'; bip_simple<='1';
-		end if;
-
-	when s10 =>
-		if fin_bip='1' then 
-		state:=s4; codeFonction <="0011"; bip_double<='0';
-		end if;
-
-	when s11 =>
-		if fin_bip='1' then 
-		state:=s4; codeFonction <="0011"; bip_simple<='0';
-		end if;
 	end if;
 	end process gestion_bp;
+
+	-------------------------PROCESS DE TEMPORISATIONS ----------------------------------------------
+gen_tempo:process (raz_n, Clk100en)
+variable duree_tempo : integer range 0 to 300;
+begin
+	if raz_n ='0' then
+	duree_tempo:= 0; fin_tempo <='0';
+	elsif rising_edge(Clk100en) then
+		if val_tempo ='1' then
+		duree_tempo:=duree_tempo+1;
+			if duree_tempo=300 then duree_tempo:=0;
+			fin_tempo <='1';
+			end if;
+		else duree_tempo:=0;	fin_tempo <='0';
+		end if;
+	end if;
+end process gen_tempo;
+
+end arch_gestion_boutton;
