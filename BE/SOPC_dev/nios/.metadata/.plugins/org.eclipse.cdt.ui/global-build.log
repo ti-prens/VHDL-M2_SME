@@ -1,18 +1,24 @@
-11:48:54 **** Incremental Build of configuration Nios II for project new_nios_mcu ****
+18:21:19 **** Incremental Build of configuration Nios II for project BE_VHDL ****
 make all 
-Info: Building ../new_nios_mcu_bsp/
-make --no-print-directory -C ../new_nios_mcu_bsp/
+Info: Building ../BE_VHDL_bsp/
+make --no-print-directory -C ../BE_VHDL_bsp/
 [BSP build complete]
-[new_nios_mcu build complete]
-11:48:59 **** Build of configuration Nios II for project new_nios_mcu ****
+[BE_VHDL build complete]
+18:21:29 **** Incremental Build of configuration Nios II for project BE_VHDL ****
 make all 
-Info: Building ../new_nios_mcu_bsp/
-make --no-print-directory -C ../new_nios_mcu_bsp/
+Info: Building ../BE_VHDL_bsp/
+make --no-print-directory -C ../BE_VHDL_bsp/
 [BSP build complete]
-[new_nios_mcu build complete]
-11:49:00 **** Incremental Build of configuration Nios II for project new_nios_mcu ****
+[BE_VHDL build complete]
+18:21:44 **** Build of configuration Nios II for project BE_VHDL ****
 make all 
-Info: Building ../new_nios_mcu_bsp/
-make --no-print-directory -C ../new_nios_mcu_bsp/
+Info: Building ../BE_VHDL_bsp/
+make --no-print-directory -C ../BE_VHDL_bsp/
 [BSP build complete]
-[new_nios_mcu build complete]
+[BE_VHDL build complete]
+18:22:05 **** Incremental Build of configuration Nios II for project BE_VHDL ****
+make all 
+Info: Building ../BE_VHDL_bsp/
+make --no-print-directory -C ../BE_VHDL_bsp/
+[BSP build complete]
+[BE_VHDL build complete]

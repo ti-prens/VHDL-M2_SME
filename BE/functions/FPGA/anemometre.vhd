@@ -129,7 +129,7 @@ begin
 		);
 
 
-	edge_detector_1 : entity edge_detector
+	edge_detector_1 : edge_detector
 		port map (
 			clk           => clk_50M,
 			f_in          => in_freq_anemometre,

@@ -44,6 +44,10 @@
 					"strict" : false
 				},
 				{
+					"name" : "in_freq_anemometre_in_freq_anemometre",
+					"strict" : false
+				},
+				{
 					"name" : "altera_reserved_tms",
 					"strict" : false
 				},

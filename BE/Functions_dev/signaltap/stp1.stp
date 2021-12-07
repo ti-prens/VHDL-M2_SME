@@ -1,4 +1,4 @@
-<session jtag_chain="" jtag_device="" sof_file="../output_files/projet_vhdl.sof">
+<session jtag_chain="USB-Blaster [1-2]" jtag_device="@1: 10CL025(Y|Z)/EP3C25/EP4CE22 (0x020F30DD)" sof_file="../output_files/projet_vhdl.sof">
   <display_tree gui_logging_enabled="0">
     <display_branch instance="auto_signaltap_0" log="USE_GLOBAL_TEMP" signal_set="USE_GLOBAL_TEMP" trigger="USE_GLOBAL_TEMP"/>
   </display_tree>
@@ -229,6 +229,6 @@
     <single attribute="sof manager visible" value="1"/>
     <multi attribute="column width" size="23" value="34,34,439,74,68,166,177,96,98,98,88,88,166,101,101,101,101,101,101,101,101,107,78"/>
     <multi attribute="frame size" size="2" value="1920,974"/>
-    <multi attribute="jtag widget size" size="2" value="479,269"/>
+    <multi attribute="jtag widget size" size="2" value="479,228"/>
   </global_info>
 </session>
