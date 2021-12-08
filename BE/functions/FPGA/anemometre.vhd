@@ -129,7 +129,7 @@ begin
 		);
 
 
-	edge_detector_1 : entity work.edge_detector
+	edge_detector_1 : edge_detector
 		port map (
 			clk           => clk_50M,
 			f_in          => in_freq_anemometre,
@@ -181,13 +181,16 @@ begin
 	end process pOutput;
 
 
-	sortie_data_valid <= '1' when second = '1' else '0';	
-		--'0' when continu = '0' and start_stop = '0' else
-		--'1' when continu = '1' and second = '1' else
-		--'1' when continu = '0' and second = '1' else
-		--timer must be disable when continu = '0'
+	sortie_data_valid <= '1' when second = '1' else '0';
+	--'0' when continu = '0' and start_stop = '0' else
+	--'1' when continu = '1' and second = '1' else
+	--'1' when continu = '0' and second = '1' else
+	--timer must be disable when continu = '0'
 
 
 	--data_anemometre <= counter;
 
 end architecture anemometre_oc;
+
+
+
