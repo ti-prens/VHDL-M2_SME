@@ -10,8 +10,8 @@ entity pwm is
 	);
 	port (
 		CLOCK, ENABLE, RESET: in std_logic;
-		PSC, PWM_period: in std_logic_vector(H-1 downto 0);
-		PWM_duty_cycle, PWM_period: in std_logic_vector(H-1 downto 0);
+		PWM_period: in std_logic_vector(H-1 downto 0);
+		PWM_duty_cycle: in std_logic_vector(H-1 downto 0);
 		PWM_output	: out std_logic
 	);
 end entity pwm;
@@ -35,71 +35,47 @@ signal sortie_compteur : std_logic_vector (H-1 downto 0);
 --------------------------------------------------------------------------------
 -- declaration des composants
 
-component diviseur
-	generic (
-	    P : integer := 16 --taille Prescaler
-	);
-	port (
-		Clock, Enable, Reset: in std_logic;
-		Prescaler : in std_logic_vector(P-1 downto 0); --prescaler == (PSC + 1) : et doit etre  >=1 
-		DivOutput	: out std_logic
-	);
-end component diviseur;
- 
 
-component comparateur 
-  --generic ( Q_1 : integer  : = 5);
-    generic (
-	    N : integer
-	);
-	port (
-		valeur_a, valeur_b		: in std_logic_vector (N-1 downto 0);
-		sortie_comparaison		: out std_logic_vector (2 downto 0) 
-		-- sortie_comparaison : 100 => a > b ; 010 => a = b ; 001 => a < b
-	);
-end component comparateur;
-
-component timer is 
-	generic (
-	    P : integer := 16 --taille Prescaler
-	);
-	port (
-		Clock, Enable, Reset: in std_logic;
-		--Autoreload,
-		Prescaler : in std_logic_vector(P-1 downto 0); --prescaler == (PSC + 1) : et doit etre  >=1
-		coUEV	: out std_logic; --counter overflow update event
-		tim_counter : out std_logic_vector(P-1 downto 0)
-	);
-end component timer;
-
+	component timer is
+		generic (
+			P : integer := 16
+		);
+		port (
+			Clock, Enable, Reset : in  std_logic;
+			Enable_PWM           : in  std_logic;
+			Prescaler            : in  std_logic_vector(P-1 downto 0);
+			Autoreload           : in  std_logic_vector(P-1 downto 0);
+			Capture_Compare      : in  std_logic_vector (P-1 downto 0);
+			coUEV                : out std_logic;
+			PWM_output           : out std_logic;
+			tim_counter          : out std_logic_vector(P-1 downto 0)
+		);
+	end component timer;
 
 --------------------------------------------------------------------------------
 begin
 	
-	div: diviseur generic map (N => P)
-		port map (	Clock => CLOCK,
-					Enable => ENABLE,
-					Reset => internal_reset,
-					Prescaler => ,
-					DivOutput => );
+	timer_1 : entity work.timer
+		generic map (
+			P => H
+		)
+		port map (
+			Clock           => CLOCK,
+			Enable          => ENABLE,
+			Reset           => RESET,
+			Enable_PWM      => '1',
+			Prescaler       => Prescaler,
+			Autoreload      => Autoreload,
+			Capture_Compare => Capture_Compare,
+			coUEV           => coUEV,
+			PWM_output      => PWM_output,
+			tim_counter     => tim_counter
+		);	
 	
-
-	
-
-	compt: compteur -- compt est une instance du compteur
-	generic map (N => P)
-	port map (clk => Clock,  arst_n=>'1', en => '1', q => sortie_compteur, SRst => reset_synchrone);
-	
-	compa1: comparateur -- compa1 est une instance du comparateur
-	generic map (N => P)
-	port map (valeur_a=>sortie_compteur, valeur_b=>prescaler, sortie_comparaison=>sortie_comparateur_1);
-	
-	compa2: comparateur -- compa2 est une instance du comparateur
-	generic map (N => P)
-	port map (valeur_a=>sortie_compteur, valeur_b=>prescaler, sortie_comparaison=>sortie_comparateur_1);
 	
 	
 	
+
 	
 	
 end architecture rtl;

@@ -89,7 +89,7 @@
 
 
 #define ANEMOMETRE_conf (unsigned int *) AVALONANEMO_0_BASE
-#define ANEMOMETRE_data (unsigned int *) (AVALONANEMO_0_BASE)
+#define ANEMOMETRE_data (unsigned int *) (AVALONANEMO_0_BASE + 4)
 #define ANEMOMETRE_Config(ST, continu, reset) (*ANEMOMETRE_conf = (ST << 2) | (continu << 1) | reset)
 #define ANEMOMETRE_get_freq() *ANEMOMETRE_data & 0xFF
 
@@ -99,7 +99,7 @@ int main()
 	alt_putstr("Hello from Nios II!\n");
 
 	  uint32_t * leds = (uint32_t *)PIO_0_BASE;
-	  uint32_t * anemo_read = (uint32_t *)AVALONANEMO_0_BASE;
+	  uint32_t * anemo_read = (uint32_t *)AVALONANEMO_0_BASE + 4;
 	  uint32_t * anemo_write = (uint32_t *)AVALONANEMO_0_BASE;
 	  int x = 0;
 
