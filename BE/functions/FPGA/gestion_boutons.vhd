@@ -24,7 +24,7 @@ LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 USE ieee.std_logic_arith.all;
 
-ENTITY gestion_boutton IS
+ENTITY gestion_boutons IS
 	PORT (
 			 clk_50M		: in std_logic;
 			 reset_n		: in std_logic;
@@ -34,9 +34,9 @@ ENTITY gestion_boutton IS
 			--ledBabord, ledTribord,ledSTBY, out_bip : out std_logic
 			out_bip			: out std_logic		  
 		  );
-END gestion_boutton  ;
+END gestion_boutons  ;
 
-ARCHITECTURE arch_gestion_boutton OF gestion_boutton IS
+ARCHITECTURE arch_gestion_boutons OF gestion_boutons IS
 signal raz_n    : std_logic;
 signal internal_reset    : std_logic;
 signal timer_enable      : std_logic := '1';
@@ -194,4 +194,4 @@ begin
 	end if;
 end process gen_tempo;
 
-end arch_gestion_boutton;
+end arch_gestion_boutons;
