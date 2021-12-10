@@ -105,7 +105,7 @@ LOAD /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin
                 0x0000000000000020                PROVIDE (__ram_exceptions_end, ABSOLUTE (.))
                 0x0000000000000020                PROVIDE (__flash_exceptions_start, LOADADDR (.exceptions))
 
-.text           0x0000000000000020      0xc90
+.text           0x0000000000000020      0xc94
                 [!provide]                        PROVIDE (stext, ABSOLUTE (.))
  *(.interp)
  *(.hash)
@@ -153,74 +153,74 @@ LOAD /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin
  .text          0x0000000000000020       0x3c ../BE_VHDL_bsp//obj/HAL/src/crt0.o
                 0x0000000000000020                _start
  .text          0x000000000000005c        0x0 obj/default/hello_world_small.o
- .text.startup  0x000000000000005c       0x78 obj/default/hello_world_small.o
+ .text.startup  0x000000000000005c       0x7c obj/default/hello_world_small.o
                 0x000000000000005c                main
- .text          0x00000000000000d4        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-printf.o)
+ .text          0x00000000000000d8        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-printf.o)
  .text._printf_r
-                0x00000000000000d4       0x3c /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-printf.o)
-                0x00000000000000d4                _printf_r
- .text.printf   0x0000000000000110       0x4c /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-printf.o)
-                0x0000000000000110                printf
- .text          0x000000000000015c        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-vfprintf.o)
+                0x00000000000000d8       0x3c /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-printf.o)
+                0x00000000000000d8                _printf_r
+ .text.printf   0x0000000000000114       0x4c /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-printf.o)
+                0x0000000000000114                printf
+ .text          0x0000000000000160        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-vfprintf.o)
  .text.print_repeat
-                0x000000000000015c       0x6c /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-vfprintf.o)
+                0x0000000000000160       0x6c /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-vfprintf.o)
  .text.___vfprintf_internal_r
-                0x00000000000001c8      0x52c /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-vfprintf.o)
-                0x00000000000001c8                ___vfprintf_internal_r
+                0x00000000000001cc      0x52c /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-vfprintf.o)
+                0x00000000000001cc                ___vfprintf_internal_r
  .text.__vfprintf_internal
-                0x00000000000006f4       0x1c /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-vfprintf.o)
-                0x00000000000006f4                __vfprintf_internal
- .text          0x0000000000000710        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-fvwrite_small_dev.o)
+                0x00000000000006f8       0x1c /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-vfprintf.o)
+                0x00000000000006f8                __vfprintf_internal
+ .text          0x0000000000000714        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-fvwrite_small_dev.o)
  .text.__sfvwrite_small_dev
-                0x0000000000000710       0xb8 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-fvwrite_small_dev.o)
-                0x0000000000000710                __sfvwrite_small_dev
- .text          0x00000000000007c8        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-impure.o)
- .text          0x00000000000007c8        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-strlen.o)
- .text.strlen   0x00000000000007c8       0x1c /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-strlen.o)
-                0x00000000000007c8                strlen
- .text          0x00000000000007e4        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-writer.o)
+                0x0000000000000714       0xb8 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-fvwrite_small_dev.o)
+                0x0000000000000714                __sfvwrite_small_dev
+ .text          0x00000000000007cc        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-impure.o)
+ .text          0x00000000000007cc        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-strlen.o)
+ .text.strlen   0x00000000000007cc       0x1c /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-strlen.o)
+                0x00000000000007cc                strlen
+ .text          0x00000000000007e8        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-writer.o)
  .text._write_r
-                0x00000000000007e4       0x58 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-writer.o)
-                0x00000000000007e4                _write_r
- .text          0x000000000000083c        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-int_errno.o)
- .text          0x000000000000083c      0x1b4 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
-                0x000000000000083c                __divsi3
-                0x00000000000008c0                __modsi3
-                0x0000000000000934                __udivsi3
-                0x0000000000000998                __umodsi3
- .text          0x00000000000009f0       0x28 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-mul.o)
-                0x00000000000009f0                __mulsi3
- .text          0x0000000000000a18       0xe0 ../BE_VHDL_bsp//libhal_bsp.a(alt_load.o)
-                0x0000000000000a18                alt_load
- .text          0x0000000000000af8       0x2c ../BE_VHDL_bsp//libhal_bsp.a(alt_main.o)
-                0x0000000000000af8                alt_main
- .text          0x0000000000000b24       0x38 ../BE_VHDL_bsp//libhal_bsp.a(alt_putstr.o)
-                0x0000000000000b24                alt_putstr
- .text          0x0000000000000b5c        0x4 ../BE_VHDL_bsp//libhal_bsp.a(alt_usleep.o)
-                0x0000000000000b5c                usleep
- .text          0x0000000000000b60       0x60 ../BE_VHDL_bsp//libhal_bsp.a(alt_write.o)
-                0x0000000000000b60                write
- .text          0x0000000000000bc0       0x24 ../BE_VHDL_bsp//libhal_bsp.a(alt_sys_init.o)
-                0x0000000000000bc0                alt_irq_init
-                0x0000000000000be0                alt_sys_init
- .text          0x0000000000000be4       0x34 ../BE_VHDL_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
-                0x0000000000000be4                altera_avalon_jtag_uart_write
- .text          0x0000000000000c18       0x88 ../BE_VHDL_bsp//libhal_bsp.a(alt_busy_sleep.o)
-                0x0000000000000c18                alt_busy_sleep
- .text          0x0000000000000ca0        0x4 ../BE_VHDL_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
-                0x0000000000000ca0                alt_dcache_flush_all
- .text          0x0000000000000ca4        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_errno.o)
- .text          0x0000000000000ca4        0x4 ../BE_VHDL_bsp//libhal_bsp.a(alt_icache_flush_all.o)
-                0x0000000000000ca4                alt_icache_flush_all
- .text          0x0000000000000ca8        0x8 ../BE_VHDL_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
-                0x0000000000000ca8                altera_nios2_gen2_irq_init
+                0x00000000000007e8       0x58 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-writer.o)
+                0x00000000000007e8                _write_r
+ .text          0x0000000000000840        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-int_errno.o)
+ .text          0x0000000000000840      0x1b4 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
+                0x0000000000000840                __divsi3
+                0x00000000000008c4                __modsi3
+                0x0000000000000938                __udivsi3
+                0x000000000000099c                __umodsi3
+ .text          0x00000000000009f4       0x28 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-mul.o)
+                0x00000000000009f4                __mulsi3
+ .text          0x0000000000000a1c       0xe0 ../BE_VHDL_bsp//libhal_bsp.a(alt_load.o)
+                0x0000000000000a1c                alt_load
+ .text          0x0000000000000afc       0x2c ../BE_VHDL_bsp//libhal_bsp.a(alt_main.o)
+                0x0000000000000afc                alt_main
+ .text          0x0000000000000b28       0x38 ../BE_VHDL_bsp//libhal_bsp.a(alt_putstr.o)
+                0x0000000000000b28                alt_putstr
+ .text          0x0000000000000b60        0x4 ../BE_VHDL_bsp//libhal_bsp.a(alt_usleep.o)
+                0x0000000000000b60                usleep
+ .text          0x0000000000000b64       0x60 ../BE_VHDL_bsp//libhal_bsp.a(alt_write.o)
+                0x0000000000000b64                write
+ .text          0x0000000000000bc4       0x24 ../BE_VHDL_bsp//libhal_bsp.a(alt_sys_init.o)
+                0x0000000000000bc4                alt_irq_init
+                0x0000000000000be4                alt_sys_init
+ .text          0x0000000000000be8       0x34 ../BE_VHDL_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+                0x0000000000000be8                altera_avalon_jtag_uart_write
+ .text          0x0000000000000c1c       0x88 ../BE_VHDL_bsp//libhal_bsp.a(alt_busy_sleep.o)
+                0x0000000000000c1c                alt_busy_sleep
+ .text          0x0000000000000ca4        0x4 ../BE_VHDL_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+                0x0000000000000ca4                alt_dcache_flush_all
+ .text          0x0000000000000ca8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_errno.o)
+ .text          0x0000000000000ca8        0x4 ../BE_VHDL_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+                0x0000000000000ca8                alt_icache_flush_all
+ .text          0x0000000000000cac        0x8 ../BE_VHDL_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x0000000000000cac                altera_nios2_gen2_irq_init
  *(.gnu.warning.*)
  *(.fini)
                 [!provide]                        PROVIDE (__etext, ABSOLUTE (.))
                 [!provide]                        PROVIDE (_etext, ABSOLUTE (.))
                 [!provide]                        PROVIDE (etext, ABSOLUTE (.))
  *(.eh_frame_hdr)
-                0x0000000000000cb0                . = ALIGN (0x4)
+                0x0000000000000cb4                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__preinit_array_start, ABSOLUTE (.))
  *(.preinit_array)
                 [!provide]                        PROVIDE (__preinit_array_end, ABSOLUTE (.))
@@ -242,126 +242,126 @@ LOAD /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin
  *(SORT(.dtors.*))
                 [!provide]                        PROVIDE (__DTOR_END__, ABSOLUTE (.))
  *(.jcr)
-                0x0000000000000cb0                . = ALIGN (0x4)
+                0x0000000000000cb4                . = ALIGN (0x4)
 
-.rodata         0x0000000000000cb0       0x48
-                0x0000000000000cb0                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
-                0x0000000000000cb0                . = ALIGN (0x4)
+.rodata         0x0000000000000cb4       0x48
+                0x0000000000000cb4                PROVIDE (__ram_rodata_start, ABSOLUTE (.))
+                0x0000000000000cb4                . = ALIGN (0x4)
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.str1.4
-                0x0000000000000cb0       0x48 obj/default/hello_world_small.o
+                0x0000000000000cb4       0x48 obj/default/hello_world_small.o
                                          0x47 (size before relaxing)
  *(.rodata1)
-                0x0000000000000cf8                . = ALIGN (0x4)
-                0x0000000000000cf8                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
-                0x0000000000000cb0                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
+                0x0000000000000cfc                . = ALIGN (0x4)
+                0x0000000000000cfc                PROVIDE (__ram_rodata_end, ABSOLUTE (.))
+                0x0000000000000cb4                PROVIDE (__flash_rodata_start, LOADADDR (.rodata))
 
-.rwdata         0x0000000000000cf8       0xf0 load address 0x0000000000000de8
-                0x0000000000000cf8                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
-                0x0000000000000cf8                . = ALIGN (0x4)
+.rwdata         0x0000000000000cfc       0xf0 load address 0x0000000000000dec
+                0x0000000000000cfc                PROVIDE (__ram_rwdata_start, ABSOLUTE (.))
+                0x0000000000000cfc                . = ALIGN (0x4)
  *(.got.plt)
  *(.got)
  *(.data1)
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x0000000000000cf8        0x0 ../BE_VHDL_bsp//obj/HAL/src/crt0.o
- .data          0x0000000000000cf8        0x0 obj/default/hello_world_small.o
- .data          0x0000000000000cf8        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-printf.o)
- .data          0x0000000000000cf8        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-vfprintf.o)
- .data          0x0000000000000cf8        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-fvwrite_small_dev.o)
- .data          0x0000000000000cf8        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-impure.o)
+ .data          0x0000000000000cfc        0x0 ../BE_VHDL_bsp//obj/HAL/src/crt0.o
+ .data          0x0000000000000cfc        0x0 obj/default/hello_world_small.o
+ .data          0x0000000000000cfc        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-printf.o)
+ .data          0x0000000000000cfc        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-vfprintf.o)
+ .data          0x0000000000000cfc        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-fvwrite_small_dev.o)
+ .data          0x0000000000000cfc        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-impure.o)
  .data.impure_data
-                0x0000000000000cf8       0xe0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-impure.o)
- .data          0x0000000000000dd8        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-strlen.o)
- .data          0x0000000000000dd8        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-writer.o)
- .data          0x0000000000000dd8        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-int_errno.o)
- .data          0x0000000000000dd8        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
- .data          0x0000000000000dd8        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-mul.o)
- .data          0x0000000000000dd8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_load.o)
- .data          0x0000000000000dd8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_main.o)
- .data          0x0000000000000dd8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_putstr.o)
- .data          0x0000000000000dd8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_usleep.o)
- .data          0x0000000000000dd8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_write.o)
- .data          0x0000000000000dd8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_sys_init.o)
- .data          0x0000000000000dd8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .data          0x0000000000000dd8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_busy_sleep.o)
- .data          0x0000000000000dd8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .data          0x0000000000000dd8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_errno.o)
- .data          0x0000000000000dd8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .data          0x0000000000000dd8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
-                0x0000000000008dd8                _gp = ABSOLUTE ((. + 0x8000))
+                0x0000000000000cfc       0xe0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-impure.o)
+ .data          0x0000000000000ddc        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-strlen.o)
+ .data          0x0000000000000ddc        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-writer.o)
+ .data          0x0000000000000ddc        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-int_errno.o)
+ .data          0x0000000000000ddc        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .data          0x0000000000000ddc        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-mul.o)
+ .data          0x0000000000000ddc        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_load.o)
+ .data          0x0000000000000ddc        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_main.o)
+ .data          0x0000000000000ddc        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_putstr.o)
+ .data          0x0000000000000ddc        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_usleep.o)
+ .data          0x0000000000000ddc        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_write.o)
+ .data          0x0000000000000ddc        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_sys_init.o)
+ .data          0x0000000000000ddc        0x0 ../BE_VHDL_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .data          0x0000000000000ddc        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_busy_sleep.o)
+ .data          0x0000000000000ddc        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .data          0x0000000000000ddc        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_errno.o)
+ .data          0x0000000000000ddc        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .data          0x0000000000000ddc        0x0 ../BE_VHDL_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+                0x0000000000008ddc                _gp = ABSOLUTE ((. + 0x8000))
                 [!provide]                        PROVIDE (gp, _gp)
  *(.rwdata .rwdata.*)
  *(.sdata .sdata.* .gnu.linkonce.s.*)
  .sdata._global_impure_ptr
-                0x0000000000000dd8        0x4 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-impure.o)
-                0x0000000000000dd8                _global_impure_ptr
- .sdata._impure_ptr
                 0x0000000000000ddc        0x4 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-impure.o)
-                0x0000000000000ddc                _impure_ptr
- .sdata         0x0000000000000de0        0x4 ../BE_VHDL_bsp//libhal_bsp.a(alt_sys_init.o)
-                0x0000000000000de0                jtag_uart_0
- .sdata         0x0000000000000de4        0x4 ../BE_VHDL_bsp//libhal_bsp.a(alt_errno.o)
-                0x0000000000000de4                alt_errno
+                0x0000000000000ddc                _global_impure_ptr
+ .sdata._impure_ptr
+                0x0000000000000de0        0x4 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-impure.o)
+                0x0000000000000de0                _impure_ptr
+ .sdata         0x0000000000000de4        0x4 ../BE_VHDL_bsp//libhal_bsp.a(alt_sys_init.o)
+                0x0000000000000de4                jtag_uart_0
+ .sdata         0x0000000000000de8        0x4 ../BE_VHDL_bsp//libhal_bsp.a(alt_errno.o)
+                0x0000000000000de8                alt_errno
  *(.sdata2 .sdata2.* .gnu.linkonce.s2.*)
-                0x0000000000000de8                . = ALIGN (0x4)
-                0x0000000000000de8                _edata = ABSOLUTE (.)
+                0x0000000000000dec                . = ALIGN (0x4)
+                0x0000000000000dec                _edata = ABSOLUTE (.)
                 [!provide]                        PROVIDE (edata, ABSOLUTE (.))
-                0x0000000000000de8                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
-                0x0000000000000de8                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
+                0x0000000000000dec                PROVIDE (__ram_rwdata_end, ABSOLUTE (.))
+                0x0000000000000dec                PROVIDE (__flash_rwdata_start, LOADADDR (.rwdata))
 
-.bss            0x0000000000000ed8       0x10
-                0x0000000000000ed8                __bss_start = ABSOLUTE (.)
+.bss            0x0000000000000edc       0x10
+                0x0000000000000edc                __bss_start = ABSOLUTE (.)
                 [!provide]                        PROVIDE (__sbss_start, ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_start, ABSOLUTE (.))
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
- .sbss          0x0000000000000ed8        0x4 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-int_errno.o)
-                0x0000000000000ed8                errno
- .sbss          0x0000000000000edc        0xc ../BE_VHDL_bsp//libhal_bsp.a(alt_main.o)
-                0x0000000000000edc                alt_envp
-                0x0000000000000ee0                alt_argv
-                0x0000000000000ee4                alt_argc
+ .sbss          0x0000000000000edc        0x4 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-int_errno.o)
+                0x0000000000000edc                errno
+ .sbss          0x0000000000000ee0        0xc ../BE_VHDL_bsp//libhal_bsp.a(alt_main.o)
+                0x0000000000000ee0                alt_envp
+                0x0000000000000ee4                alt_argv
+                0x0000000000000ee8                alt_argc
  *(.sbss2 .sbss2.* .gnu.linkonce.sb2.*)
  *(.scommon)
                 [!provide]                        PROVIDE (__sbss_end, ABSOLUTE (.))
                 [!provide]                        PROVIDE (___sbss_end, ABSOLUTE (.))
  *(.dynbss)
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x0000000000000ee8        0x0 ../BE_VHDL_bsp//obj/HAL/src/crt0.o
- .bss           0x0000000000000ee8        0x0 obj/default/hello_world_small.o
- .bss           0x0000000000000ee8        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-printf.o)
- .bss           0x0000000000000ee8        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-vfprintf.o)
- .bss           0x0000000000000ee8        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-fvwrite_small_dev.o)
- .bss           0x0000000000000ee8        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-impure.o)
- .bss           0x0000000000000ee8        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-strlen.o)
- .bss           0x0000000000000ee8        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-writer.o)
- .bss           0x0000000000000ee8        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-int_errno.o)
- .bss           0x0000000000000ee8        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
- .bss           0x0000000000000ee8        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-mul.o)
- .bss           0x0000000000000ee8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_load.o)
- .bss           0x0000000000000ee8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_main.o)
- .bss           0x0000000000000ee8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_putstr.o)
- .bss           0x0000000000000ee8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_usleep.o)
- .bss           0x0000000000000ee8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_write.o)
- .bss           0x0000000000000ee8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_sys_init.o)
- .bss           0x0000000000000ee8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
- .bss           0x0000000000000ee8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_busy_sleep.o)
- .bss           0x0000000000000ee8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
- .bss           0x0000000000000ee8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_errno.o)
- .bss           0x0000000000000ee8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_icache_flush_all.o)
- .bss           0x0000000000000ee8        0x0 ../BE_VHDL_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
+ .bss           0x0000000000000eec        0x0 ../BE_VHDL_bsp//obj/HAL/src/crt0.o
+ .bss           0x0000000000000eec        0x0 obj/default/hello_world_small.o
+ .bss           0x0000000000000eec        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-printf.o)
+ .bss           0x0000000000000eec        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-vfprintf.o)
+ .bss           0x0000000000000eec        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-fvwrite_small_dev.o)
+ .bss           0x0000000000000eec        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-impure.o)
+ .bss           0x0000000000000eec        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-strlen.o)
+ .bss           0x0000000000000eec        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-writer.o)
+ .bss           0x0000000000000eec        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/../../../../../H-x86_64-pc-linux-gnu/nios2-elf/lib/mno-hw-mul/libsmallc.a(lib_a-int_errno.o)
+ .bss           0x0000000000000eec        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-divmod.o)
+ .bss           0x0000000000000eec        0x0 /home/prince/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-pc-linux-gnu/bin/../lib/gcc/nios2-elf/5.3.0/mno-hw-mul/libgcc.a(lib2-mul.o)
+ .bss           0x0000000000000eec        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_load.o)
+ .bss           0x0000000000000eec        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_main.o)
+ .bss           0x0000000000000eec        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_putstr.o)
+ .bss           0x0000000000000eec        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_usleep.o)
+ .bss           0x0000000000000eec        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_write.o)
+ .bss           0x0000000000000eec        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_sys_init.o)
+ .bss           0x0000000000000eec        0x0 ../BE_VHDL_bsp//libhal_bsp.a(altera_avalon_jtag_uart_write.o)
+ .bss           0x0000000000000eec        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_busy_sleep.o)
+ .bss           0x0000000000000eec        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_dcache_flush_all.o)
+ .bss           0x0000000000000eec        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_errno.o)
+ .bss           0x0000000000000eec        0x0 ../BE_VHDL_bsp//libhal_bsp.a(alt_icache_flush_all.o)
+ .bss           0x0000000000000eec        0x0 ../BE_VHDL_bsp//libhal_bsp.a(altera_nios2_gen2_irq.o)
  *(COMMON)
-                0x0000000000000ee8                . = ALIGN (0x4)
-                0x0000000000000ee8                __bss_end = ABSOLUTE (.)
+                0x0000000000000eec                . = ALIGN (0x4)
+                0x0000000000000eec                __bss_end = ABSOLUTE (.)
 
-.onchip_ram     0x0000000000000ee8        0x0
+.onchip_ram     0x0000000000000eec        0x0
                 [!provide]                        PROVIDE (_alt_partition_onchip_ram_start, ABSOLUTE (.))
  *(.onchip_ram .onchip_ram. onchip_ram.*)
-                0x0000000000000ee8                . = ALIGN (0x4)
+                0x0000000000000eec                . = ALIGN (0x4)
                 [!provide]                        PROVIDE (_alt_partition_onchip_ram_end, ABSOLUTE (.))
-                0x0000000000000ee8                _end = ABSOLUTE (.)
-                0x0000000000000ee8                end = ABSOLUTE (.)
-                0x0000000000000ee8                __alt_stack_base = ABSOLUTE (.)
+                0x0000000000000eec                _end = ABSOLUTE (.)
+                0x0000000000000eec                end = ABSOLUTE (.)
+                0x0000000000000eec                __alt_stack_base = ABSOLUTE (.)
                 [!provide]                        PROVIDE (_alt_partition_onchip_ram_load_addr, LOADADDR (.onchip_ram))
 
 .stab

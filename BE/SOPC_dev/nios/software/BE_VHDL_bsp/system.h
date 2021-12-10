@@ -4,7 +4,7 @@
  * Machine generated for CPU 'nios_cpu' in SOPC Builder design 'nios_mcu'
  * SOPC Builder design path: ../../nios_mcu.sopcinfo
  *
- * Generated: Mon Dec 06 10:50:35 CET 2021
+ * Generated: Fri Dec 10 08:32:36 CET 2021
  */
 
 /*
@@ -61,7 +61,7 @@
  */
 
 #define ALT_MODULE_CLASS_AvalonAnemo_0 AvalonAnemo
-#define AVALONANEMO_0_BASE 0x9020
+#define AVALONANEMO_0_BASE 0x9010
 #define AVALONANEMO_0_IRQ -1
 #define AVALONANEMO_0_IRQ_INTERRUPT_CONTROLLER_ID -1
 #define AVALONANEMO_0_NAME "/dev/AvalonAnemo_0"
@@ -170,19 +170,19 @@
 #define ALT_NUM_INTERNAL_INTERRUPT_CONTROLLERS 1
 #define ALT_NUM_INTERRUPT_CONTROLLERS 1
 #define ALT_STDERR "/dev/jtag_uart_0"
-#define ALT_STDERR_BASE 0x9028
+#define ALT_STDERR_BASE 0x9018
 #define ALT_STDERR_DEV jtag_uart_0
 #define ALT_STDERR_IS_JTAG_UART
 #define ALT_STDERR_PRESENT
 #define ALT_STDERR_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDIN "/dev/jtag_uart_0"
-#define ALT_STDIN_BASE 0x9028
+#define ALT_STDIN_BASE 0x9018
 #define ALT_STDIN_DEV jtag_uart_0
 #define ALT_STDIN_IS_JTAG_UART
 #define ALT_STDIN_PRESENT
 #define ALT_STDIN_TYPE "altera_avalon_jtag_uart"
 #define ALT_STDOUT "/dev/jtag_uart_0"
-#define ALT_STDOUT_BASE 0x9028
+#define ALT_STDOUT_BASE 0x9018
 #define ALT_STDOUT_DEV jtag_uart_0
 #define ALT_STDOUT_IS_JTAG_UART
 #define ALT_STDOUT_PRESENT
@@ -207,7 +207,7 @@
  */
 
 #define ALT_MODULE_CLASS_jtag_uart_0 altera_avalon_jtag_uart
-#define JTAG_UART_0_BASE 0x9028
+#define JTAG_UART_0_BASE 0x9018
 #define JTAG_UART_0_IRQ 0
 #define JTAG_UART_0_IRQ_INTERRUPT_CONTROLLER_ID 0
 #define JTAG_UART_0_NAME "/dev/jtag_uart_0"

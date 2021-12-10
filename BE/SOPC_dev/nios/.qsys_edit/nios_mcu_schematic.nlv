@@ -10,12 +10,13 @@ preplace inst nios_mcu.jtag_uart_0 -pg 1 -lvl 3 -y 30
 preplace inst nios_mcu.nios_cpu.reset_bridge -pg 1
 preplace inst nios_mcu.AvalonAnemo_0 -pg 1 -lvl 3 -y 370
 preplace inst nios_mcu -pg 1 -lvl 1 -y 40 -regy -20
-preplace netloc EXPORT<net_container>nios_mcu</net_container>(SLAVE)nios_mcu.pio_0_external_connection,(SLAVE)pio_0.external_connection) 1 0 3 NJ 300 NJ 300 NJ
-preplace netloc FAN_OUT<net_container>nios_mcu</net_container>(SLAVE)pio_0.clk,(SLAVE)onchip_ram.clk1,(SLAVE)onchip_ram.clk2,(SLAVE)jtag_uart_0.clk,(MASTER)clk_0.clk,(SLAVE)nios_cpu.clk,(SLAVE)AvalonAnemo_0.clock) 1 1 2 400 100 800
-preplace netloc INTERCONNECT<net_container>nios_mcu</net_container>(MASTER)nios_cpu.data_master,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)pio_0.s1,(MASTER)nios_cpu.instruction_master,(SLAVE)onchip_ram.s2,(SLAVE)AvalonAnemo_0.avalon_slave_0,(SLAVE)onchip_ram.s1,(SLAVE)nios_cpu.debug_mem_slave) 1 1 2 420 120 780
+preplace netloc EXPORT<net_container>nios_mcu</net_container>(SLAVE)pio_0.external_connection,(SLAVE)nios_mcu.leds) 1 0 3 NJ 300 NJ 300 NJ
 preplace netloc EXPORT<net_container>nios_mcu</net_container>(SLAVE)nios_mcu.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
 preplace netloc EXPORT<net_container>nios_mcu</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)nios_mcu.reset) 1 0 1 NJ
-preplace netloc POINT_TO_POINT<net_container>nios_mcu</net_container>(SLAVE)jtag_uart_0.irq,(MASTER)nios_cpu.irq) 1 2 1 840
-preplace netloc FAN_OUT<net_container>nios_mcu</net_container>(SLAVE)jtag_uart_0.reset,(MASTER)clk_0.clk_reset,(SLAVE)nios_cpu.reset,(SLAVE)pio_0.reset,(SLAVE)AvalonAnemo_0.reset,(SLAVE)onchip_ram.reset2,(SLAVE)onchip_ram.reset1) 1 1 2 380 80 820
-levelinfo -pg 1 0 170 1030
-levelinfo -hier nios_mcu 180 210 540 870 1020
+preplace netloc EXPORT<net_container>nios_mcu</net_container>(SLAVE)nios_mcu.in_freq_anemometre,(SLAVE)AvalonAnemo_0.conduit_end) 1 0 3 NJ 420 NJ 420 NJ
+preplace netloc INTERCONNECT<net_container>nios_mcu</net_container>(MASTER)nios_cpu.instruction_master,(MASTER)nios_cpu.data_master,(SLAVE)AvalonAnemo_0.avalon_slave_0,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)onchip_ram.s2,(SLAVE)nios_cpu.debug_mem_slave,(SLAVE)pio_0.s1,(SLAVE)onchip_ram.s1) 1 1 2 370 120 770
+preplace netloc FAN_OUT<net_container>nios_mcu</net_container>(SLAVE)onchip_ram.reset1,(MASTER)clk_0.clk_reset,(SLAVE)nios_cpu.reset,(SLAVE)jtag_uart_0.reset,(SLAVE)pio_0.reset,(SLAVE)AvalonAnemo_0.reset,(SLAVE)onchip_ram.reset2) 1 1 2 350 100 790
+preplace netloc POINT_TO_POINT<net_container>nios_mcu</net_container>(SLAVE)jtag_uart_0.irq,(MASTER)nios_cpu.irq) 1 2 1 750
+preplace netloc FAN_OUT<net_container>nios_mcu</net_container>(SLAVE)onchip_ram.clk2,(MASTER)clk_0.clk,(SLAVE)nios_cpu.clk,(SLAVE)onchip_ram.clk1,(SLAVE)pio_0.clk,(SLAVE)AvalonAnemo_0.clock,(SLAVE)jtag_uart_0.clk) 1 1 2 330 80 730
+levelinfo -pg 1 0 120 980
+levelinfo -hier nios_mcu 130 160 490 820 970

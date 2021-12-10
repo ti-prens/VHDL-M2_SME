@@ -72,7 +72,7 @@ begin
         port map (
             clk_50M            => clk,
             in_freq_anemometre => in_freq_anemometre,
-            reset_n            => reset_n,
+            reset_n            => S_internal_reset,
             continu            => S_continu,
             start_stop         => S_start_stop,
             data_valid         => S_data_valid,
@@ -93,7 +93,7 @@ begin
             if(chipselect = '1' and write_n = '0') then
 
                 if(address = '0') then
-                    S_internal_reset <= writedata( 0);
+                    S_internal_reset <= writedata(0);
                     S_continu        <= writedata(1);
                     S_start_stop     <= writedata(2);
                 end if;

@@ -120,15 +120,7 @@ int main()
 			  printf("Freq = %d\n", ANEMOMETRE_get_freq());
 		  }
 
-
-
-
-
 		  usleep(500000);
-
-
-
-
 
 
 	  }

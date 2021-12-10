@@ -2,10 +2,10 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Dec 6, 2021 10:48:02 AM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1638784083534</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Dec 10, 2021 8:32:36 AM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1639121556195</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>/home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/SOPC_dev/nios/software/BE_VHDL_bsp</BspGeneratedLocation>
-        <BspSettingsFile>./settings.bsp</BspSettingsFile>
+        <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>../../nios_mcu.sopcinfo</SopcDesignFile>
         <JdiFile>default</JdiFile>
         <Cpu>nios_cpu</Cpu>
@@ -912,13 +912,13 @@
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>AvalonAnemo_0</slaveDescriptor>
-                <addressRange>0x00009020 - 0x00009027</addressRange>
+                <addressRange>0x00009010 - 0x00009017</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart_0</slaveDescriptor>
-                <addressRange>0x00009028 - 0x0000902F</addressRange>
+                <addressRange>0x00009018 - 0x0000901F</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

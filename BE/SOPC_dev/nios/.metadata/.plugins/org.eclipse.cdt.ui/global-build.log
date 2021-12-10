@@ -1,24 +1,76 @@
-18:21:19 **** Incremental Build of configuration Nios II for project BE_VHDL ****
+08:33:31 **** Incremental Build of configuration Nios II for project BE_VHDL ****
 make all 
 Info: Building ../BE_VHDL_bsp/
 make --no-print-directory -C ../BE_VHDL_bsp/
 [BSP build complete]
 [BE_VHDL build complete]
-18:21:29 **** Incremental Build of configuration Nios II for project BE_VHDL ****
+08:33:36 **** Build of configuration Nios II for project BE_VHDL ****
 make all 
 Info: Building ../BE_VHDL_bsp/
 make --no-print-directory -C ../BE_VHDL_bsp/
 [BSP build complete]
 [BE_VHDL build complete]
-18:21:44 **** Build of configuration Nios II for project BE_VHDL ****
+08:33:37 **** Incremental Build of configuration Nios II for project BE_VHDL ****
 make all 
 Info: Building ../BE_VHDL_bsp/
 make --no-print-directory -C ../BE_VHDL_bsp/
 [BSP build complete]
 [BE_VHDL build complete]
-18:22:05 **** Incremental Build of configuration Nios II for project BE_VHDL ****
+08:34:04 **** Incremental Build of configuration Nios II for project BE_VHDL ****
 make all 
 Info: Building ../BE_VHDL_bsp/
 make --no-print-directory -C ../BE_VHDL_bsp/
 [BSP build complete]
+[BE_VHDL build complete]
+08:34:12 **** Incremental Build of configuration Nios II for project BE_VHDL ****
+make all 
+Info: Building ../BE_VHDL_bsp/
+make --no-print-directory -C ../BE_VHDL_bsp/
+[BSP build complete]
+[BE_VHDL build complete]
+08:34:42 **** Incremental Build of configuration Nios II for project BE_VHDL ****
+make all 
+Info: Building ../BE_VHDL_bsp/
+make --no-print-directory -C ../BE_VHDL_bsp/
+[BSP build complete]
+[BE_VHDL build complete]
+08:34:50 **** Build of configuration Nios II for project BE_VHDL ****
+make all 
+Info: Building ../BE_VHDL_bsp/
+make --no-print-directory -C ../BE_VHDL_bsp/
+[BSP build complete]
+[BE_VHDL build complete]
+08:34:50 **** Incremental Build of configuration Nios II for project BE_VHDL ****
+make all 
+Info: Building ../BE_VHDL_bsp/
+make --no-print-directory -C ../BE_VHDL_bsp/
+[BSP build complete]
+[BE_VHDL build complete]
+08:35:04 **** Incremental Build of configuration Nios II for project BE_VHDL ****
+make all 
+Info: Building ../BE_VHDL_bsp/
+make --no-print-directory -C ../BE_VHDL_bsp/
+[BSP build complete]
+[BE_VHDL build complete]
+08:35:38 **** Incremental Build of configuration Nios II for project BE_VHDL ****
+make all 
+Info: Building ../BE_VHDL_bsp/
+make --no-print-directory -C ../BE_VHDL_bsp/
+[BSP build complete]
+Info: Compiling hello_world_small.c to obj/default/hello_world_small.o
+nios2-elf-gcc -xc -MP -MMD -c -I../BE_VHDL_bsp//HAL/inc -I../BE_VHDL_bsp/ -I../BE_VHDL_bsp//drivers/inc -pipe -D__hal__ -DALT_NO_C_PLUS_PLUS -DALT_NO_CLEAN_EXIT -D'exit(a)=_exit(a)' -DALT_NO_EXIT -DALT_USE_DIRECT_DRIVERS -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -Os -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/hello_world_small.o hello_world_small.c
+hello_world_small.c: In function 'main':
+hello_world_small.c:104:8: warning: unused variable 'x' [-Wunused-variable]
+    int x = 0;
+        ^
+hello_world_small.c:103:15: warning: unused variable 'anemo_write' [-Wunused-variable]
+    uint32_t * anemo_write = (uint32_t *)AVALONANEMO_0_BASE;
+               ^
+Info: Linking BE_VHDL.elf
+nios2-elf-g++ -T'../BE_VHDL_bsp//linker.x' -msys-crt0='../BE_VHDL_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../BE_VHDL_bsp/ -msmallc  -Wl,-Map=BE_VHDL.map   -Os -g -Wall  -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o BE_VHDL.elf obj/default/hello_world_small.o -lm -msys-lib=m
+nios2-elf-insert BE_VHDL.elf --thread_model hal --cpu_name nios_cpu --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_mcu --quartus_project_dir "/home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/SOPC_dev/nios" --sopcinfo /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/SOPC_dev/nios/software/BE_VHDL_bsp/../../nios_mcu.sopcinfo
+Info: (BE_VHDL.elf) 3580 Bytes program size (code + initialized data).
+Info:               28 KBytes free for stack + heap.
+Info: Creating BE_VHDL.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source BE_VHDL.elf >BE_VHDL.objdump
 [BE_VHDL build complete]

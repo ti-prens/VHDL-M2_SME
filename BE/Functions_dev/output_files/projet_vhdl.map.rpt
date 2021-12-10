@@ -1,5 +1,5 @@
 Analysis & Synthesis report for projet_vhdl
-Tue Dec  7 15:07:56 2021
+Fri Dec 10 08:30:05 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -207,15 +207,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec  7 15:07:56 2021       ;
+; Analysis & Synthesis Status        ; Successful - Fri Dec 10 08:30:05 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; projet_vhdl                                 ;
 ; Top-level Entity Name              ; nios_mcu                                    ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 1,747                                       ;
-;     Total combinational functions  ; 1,537                                       ;
-;     Dedicated logic registers      ; 973                                         ;
-; Total registers                    ; 973                                         ;
+; Total logic elements               ; 1,751                                       ;
+;     Total combinational functions  ; 1,540                                       ;
+;     Dedicated logic registers      ; 974                                         ;
+; Total registers                    ; 974                                         ;
 ; Total pins                         ; 11                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 273,408                                     ;
@@ -323,7 +323,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.0%      ;
+;     Processor 2            ;   0.1%      ;
 ;     Processor 3            ;   0.0%      ;
 ;     Processor 4            ;   0.0%      ;
 +----------------------------+-------------+
@@ -423,20 +423,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+---------------+
 ; Resource                                    ; Usage         ;
 +---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 1,747         ;
+; Estimated Total logic elements              ; 1,751         ;
 ;                                             ;               ;
-; Total combinational functions               ; 1537          ;
+; Total combinational functions               ; 1540          ;
 ; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 776           ;
-;     -- 3 input functions                    ; 450           ;
-;     -- <=2 input functions                  ; 311           ;
+;     -- 4 input functions                    ; 780           ;
+;     -- 3 input functions                    ; 447           ;
+;     -- <=2 input functions                  ; 313           ;
 ;                                             ;               ;
 ; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 1377          ;
+;     -- normal mode                          ; 1380          ;
 ;     -- arithmetic mode                      ; 160           ;
 ;                                             ;               ;
-; Total registers                             ; 973           ;
-;     -- Dedicated logic registers            ; 973           ;
+; Total registers                             ; 974           ;
+;     -- Dedicated logic registers            ; 974           ;
 ;     -- I/O registers                        ; 0             ;
 ;                                             ;               ;
 ; I/O pins                                    ; 11            ;
@@ -445,8 +445,8 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0             ;
 ;                                             ;               ;
 ; Maximum fan-out node                        ; clk_clk~input ;
-; Maximum fan-out                             ; 946           ;
-; Total fan-out                               ; 10906         ;
+; Maximum fan-out                             ; 947           ;
+; Total fan-out                               ; 10921         ;
 ; Average fan-out                             ; 4.06          ;
 +---------------------------------------------+---------------+
 
@@ -456,11 +456,11 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                                   ; Entity Name                                  ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------+--------------+
-; |nios_mcu                                                                                                                               ; 1537 (1)            ; 973 (0)                   ; 273408      ; 0            ; 0       ; 0         ; 11   ; 0            ; |nios_mcu                                                                                                                                                                                                                                                                                                                                                             ; nios_mcu                                     ; nios_mcu     ;
+; |nios_mcu                                                                                                                               ; 1540 (1)            ; 974 (0)                   ; 273408      ; 0            ; 0       ; 0         ; 11   ; 0            ; |nios_mcu                                                                                                                                                                                                                                                                                                                                                             ; nios_mcu                                     ; nios_mcu     ;
 ;    |altera_reset_controller:rst_controller|                                                                                             ; 6 (5)               ; 16 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|altera_reset_controller:rst_controller                                                                                                                                                                                                                                                                                                                      ; altera_reset_controller                      ; nios_mcu     ;
 ;       |altera_reset_synchronizer:alt_rst_req_sync_uq1|                                                                                  ; 1 (1)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1                                                                                                                                                                                                                                                                       ; altera_reset_synchronizer                    ; nios_mcu     ;
 ;       |altera_reset_synchronizer:alt_rst_sync_uq1|                                                                                      ; 0 (0)               ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1                                                                                                                                                                                                                                                                           ; altera_reset_synchronizer                    ; nios_mcu     ;
-;    |anemometre_avalon:avalonanemo_0|                                                                                                    ; 80 (3)              ; 73 (2)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|anemometre_avalon:avalonanemo_0                                                                                                                                                                                                                                                                                                                             ; anemometre_avalon                            ; nios_mcu     ;
+;    |anemometre_avalon:avalonanemo_0|                                                                                                    ; 80 (3)              ; 74 (3)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|anemometre_avalon:avalonanemo_0                                                                                                                                                                                                                                                                                                                             ; anemometre_avalon                            ; nios_mcu     ;
 ;       |anemometre:anemometre_1|                                                                                                         ; 77 (2)              ; 71 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|anemometre_avalon:avalonanemo_0|anemometre:anemometre_1                                                                                                                                                                                                                                                                                                     ; anemometre                                   ; work         ;
 ;          |compteur:compt_front|                                                                                                         ; 8 (8)               ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|anemometre_avalon:avalonanemo_0|anemometre:anemometre_1|compteur:compt_front                                                                                                                                                                                                                                                                                ; compteur                                     ; work         ;
 ;          |edge_detector:edge_detector_1|                                                                                                ; 1 (1)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|anemometre_avalon:avalonanemo_0|anemometre:anemometre_1|edge_detector:edge_detector_1                                                                                                                                                                                                                                                                       ; edge_detector                                ; work         ;
@@ -517,8 +517,8 @@ refer to the applicable agreement for further details.
 ;       |nios_mcu_mm_interconnect_0_router_001:router_001|                                                                                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|nios_mcu_mm_interconnect_0:mm_interconnect_0|nios_mcu_mm_interconnect_0_router_001:router_001                                                                                                                                                                                                                                                               ; nios_mcu_mm_interconnect_0_router_001        ; nios_mcu     ;
 ;       |nios_mcu_mm_interconnect_0_rsp_mux:rsp_mux|                                                                                      ; 34 (34)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|nios_mcu_mm_interconnect_0:mm_interconnect_0|nios_mcu_mm_interconnect_0_rsp_mux:rsp_mux                                                                                                                                                                                                                                                                     ; nios_mcu_mm_interconnect_0_rsp_mux           ; nios_mcu     ;
 ;       |nios_mcu_mm_interconnect_0_rsp_mux_001:rsp_mux_001|                                                                              ; 11 (11)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|nios_mcu_mm_interconnect_0:mm_interconnect_0|nios_mcu_mm_interconnect_0_rsp_mux_001:rsp_mux_001                                                                                                                                                                                                                                                             ; nios_mcu_mm_interconnect_0_rsp_mux_001       ; nios_mcu     ;
-;    |nios_mcu_nios_cpu:nios_cpu|                                                                                                         ; 960 (0)             ; 572 (0)                   ; 10240       ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|nios_mcu_nios_cpu:nios_cpu                                                                                                                                                                                                                                                                                                                                  ; nios_mcu_nios_cpu                            ; nios_mcu     ;
-;       |nios_mcu_nios_cpu_cpu:cpu|                                                                                                       ; 960 (673)           ; 572 (304)                 ; 10240       ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|nios_mcu_nios_cpu:nios_cpu|nios_mcu_nios_cpu_cpu:cpu                                                                                                                                                                                                                                                                                                        ; nios_mcu_nios_cpu_cpu                        ; nios_mcu     ;
+;    |nios_mcu_nios_cpu:nios_cpu|                                                                                                         ; 959 (0)             ; 572 (0)                   ; 10240       ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|nios_mcu_nios_cpu:nios_cpu                                                                                                                                                                                                                                                                                                                                  ; nios_mcu_nios_cpu                            ; nios_mcu     ;
+;       |nios_mcu_nios_cpu_cpu:cpu|                                                                                                       ; 959 (672)           ; 572 (304)                 ; 10240       ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|nios_mcu_nios_cpu:nios_cpu|nios_mcu_nios_cpu_cpu:cpu                                                                                                                                                                                                                                                                                                        ; nios_mcu_nios_cpu_cpu                        ; nios_mcu     ;
 ;          |nios_mcu_nios_cpu_cpu_nios2_oci:the_nios_mcu_nios_cpu_cpu_nios2_oci|                                                          ; 287 (34)            ; 268 (80)                  ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|nios_mcu_nios_cpu:nios_cpu|nios_mcu_nios_cpu_cpu:cpu|nios_mcu_nios_cpu_cpu_nios2_oci:the_nios_mcu_nios_cpu_cpu_nios2_oci                                                                                                                                                                                                                                    ; nios_mcu_nios_cpu_cpu_nios2_oci              ; nios_mcu     ;
 ;             |nios_mcu_nios_cpu_cpu_debug_slave_wrapper:the_nios_mcu_nios_cpu_cpu_debug_slave_wrapper|                                   ; 91 (0)              ; 96 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|nios_mcu_nios_cpu:nios_cpu|nios_mcu_nios_cpu_cpu:cpu|nios_mcu_nios_cpu_cpu_nios2_oci:the_nios_mcu_nios_cpu_cpu_nios2_oci|nios_mcu_nios_cpu_cpu_debug_slave_wrapper:the_nios_mcu_nios_cpu_cpu_debug_slave_wrapper                                                                                                                                            ; nios_mcu_nios_cpu_cpu_debug_slave_wrapper    ; nios_mcu     ;
 ;                |nios_mcu_nios_cpu_cpu_debug_slave_sysclk:the_nios_mcu_nios_cpu_cpu_debug_slave_sysclk|                                  ; 6 (6)               ; 49 (45)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|nios_mcu_nios_cpu:nios_cpu|nios_mcu_nios_cpu_cpu:cpu|nios_mcu_nios_cpu_cpu_nios2_oci:the_nios_mcu_nios_cpu_cpu_nios2_oci|nios_mcu_nios_cpu_cpu_debug_slave_wrapper:the_nios_mcu_nios_cpu_cpu_debug_slave_wrapper|nios_mcu_nios_cpu_cpu_debug_slave_sysclk:the_nios_mcu_nios_cpu_cpu_debug_slave_sysclk                                                      ; nios_mcu_nios_cpu_cpu_debug_slave_sysclk     ; nios_mcu     ;
@@ -546,12 +546,12 @@ refer to the applicable agreement for further details.
 ;       |altsyncram:the_altsyncram|                                                                                                       ; 0 (0)               ; 0 (0)                     ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|nios_mcu_onchip_ram:onchip_ram|altsyncram:the_altsyncram                                                                                                                                                                                                                                                                                                    ; altsyncram                                   ; work         ;
 ;          |altsyncram_h232:auto_generated|                                                                                               ; 0 (0)               ; 0 (0)                     ; 262144      ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|nios_mcu_onchip_ram:onchip_ram|altsyncram:the_altsyncram|altsyncram_h232:auto_generated                                                                                                                                                                                                                                                                     ; altsyncram_h232                              ; work         ;
 ;    |nios_mcu_pio_0:pio_0|                                                                                                               ; 11 (11)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|nios_mcu_pio_0:pio_0                                                                                                                                                                                                                                                                                                                                        ; nios_mcu_pio_0                               ; nios_mcu     ;
-;    |sld_hub:auto_hub|                                                                                                                   ; 151 (1)             ; 85 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                                            ; sld_hub                                      ; altera_sld   ;
-;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 150 (0)             ; 85 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                                            ; alt_sld_fab_with_jtag_input                  ; altera_sld   ;
-;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 150 (0)             ; 85 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                                         ; alt_sld_fab                                  ; alt_sld_fab  ;
-;             |alt_sld_fab_alt_sld_fab:alt_sld_fab|                                                                                       ; 150 (1)             ; 85 (6)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                                                                     ; alt_sld_fab_alt_sld_fab                      ; alt_sld_fab  ;
-;                |alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|                                                                            ; 149 (0)             ; 79 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                                         ; alt_sld_fab_alt_sld_fab_sldfabric            ; alt_sld_fab  ;
-;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 149 (107)           ; 79 (51)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                                            ; sld_jtag_hub                                 ; work         ;
+;    |sld_hub:auto_hub|                                                                                                                   ; 155 (1)             ; 85 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                                            ; sld_hub                                      ; altera_sld   ;
+;       |alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric| ; 154 (0)             ; 85 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric                                                                                                                                                                                                            ; alt_sld_fab_with_jtag_input                  ; altera_sld   ;
+;          |alt_sld_fab:instrumentation_fabric|                                                                                           ; 154 (0)             ; 85 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric                                                                                                                                                                         ; alt_sld_fab                                  ; alt_sld_fab  ;
+;             |alt_sld_fab_alt_sld_fab:alt_sld_fab|                                                                                       ; 154 (1)             ; 85 (6)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab                                                                                                                                     ; alt_sld_fab_alt_sld_fab                      ; alt_sld_fab  ;
+;                |alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|                                                                            ; 153 (0)             ; 79 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric                                                                                         ; alt_sld_fab_alt_sld_fab_sldfabric            ; alt_sld_fab  ;
+;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 153 (111)           ; 79 (51)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                                            ; sld_jtag_hub                                 ; work         ;
 ;                      |sld_rom_sr:hub_info_reg|                                                                                          ; 24 (24)             ; 9 (9)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg                    ; sld_rom_sr                                   ; work         ;
 ;                      |sld_shadow_jsm:shadow_jsm|                                                                                        ; 18 (18)             ; 19 (19)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |nios_mcu|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm                  ; sld_shadow_jsm                               ; altera_sld   ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------+--------------+
@@ -1061,12 +1061,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 973   ;
+; Total registers                              ; 974   ;
 ; Number of registers using Synchronous Clear  ; 103   ;
 ; Number of registers using Synchronous Load   ; 156   ;
-; Number of registers using Asynchronous Clear ; 571   ;
+; Number of registers using Asynchronous Clear ; 572   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 401   ;
+; Number of registers using Clock Enable       ; 402   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -4072,13 +4072,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 50                          ;
-; cycloneiii_ff         ; 888                         ;
+; cycloneiii_ff         ; 889                         ;
 ;     CLR               ; 245                         ;
 ;     CLR SCLR          ; 1                           ;
 ;     CLR SCLR SLD      ; 47                          ;
 ;     CLR SLD           ; 74                          ;
 ;     ENA               ; 151                         ;
-;     ENA CLR           ; 161                         ;
+;     ENA CLR           ; 162                         ;
 ;     ENA CLR SCLR      ; 3                           ;
 ;     ENA CLR SLD       ; 8                           ;
 ;     ENA SCLR          ; 16                          ;
@@ -4086,20 +4086,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR              ; 24                          ;
 ;     SLD               ; 10                          ;
 ;     plain             ; 142                         ;
-; cycloneiii_lcell_comb ; 1386                        ;
+; cycloneiii_lcell_comb ; 1385                        ;
 ;     arith             ; 152                         ;
 ;         2 data inputs ; 92                          ;
 ;         3 data inputs ; 60                          ;
-;     normal            ; 1234                        ;
+;     normal            ; 1233                        ;
 ;         0 data inputs ; 3                           ;
 ;         1 data inputs ; 22                          ;
 ;         2 data inputs ; 151                         ;
-;         3 data inputs ; 354                         ;
-;         4 data inputs ; 704                         ;
+;         3 data inputs ; 351                         ;
+;         4 data inputs ; 706                         ;
 ; cycloneiii_ram_block  ; 144                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 10.00                       ;
-; Average LUT depth     ; 2.72                        ;
+; Average LUT depth     ; 2.71                        ;
 +-----------------------+-----------------------------+
 
 
@@ -4108,7 +4108,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:05     ;
+; Top            ; 00:00:03     ;
 +----------------+--------------+
 
 
@@ -4118,7 +4118,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Dec  7 15:07:00 2021
+    Info: Processing started: Fri Dec 10 08:29:26 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off projet_vhdl -c projet_vhdl
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -4256,7 +4256,6 @@ Info (12021): Found 2 design units, including 1 entities, in source file compone
     Info (12023): Found entity 1: diviseur File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/components/diviseur.vhd Line: 7
 Info (12127): Elaborating entity "nios_mcu" for the top level hierarchy
 Info (12128): Elaborating entity "anemometre_avalon" for hierarchy "anemometre_avalon:avalonanemo_0" File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/SOPC_dev/nios/nios_mcu/synthesis/nios_mcu.vhd Line: 314
-Warning (10036): Verilog HDL or VHDL warning at anemometre_avalon.vhd(43): object "S_internal_reset" assigned a value but never read File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/SOPC_dev/nios/nios_mcu/synthesis/submodules/anemometre_avalon.vhd Line: 43
 Info (12128): Elaborating entity "anemometre" for hierarchy "anemometre_avalon:avalonanemo_0|anemometre:anemometre_1" File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/SOPC_dev/nios/nios_mcu/synthesis/submodules/anemometre_avalon.vhd Line: 71
 Info (12128): Elaborating entity "compteur" for hierarchy "anemometre_avalon:avalonanemo_0|anemometre:anemometre_1|compteur:compt_front" File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/functions/FPGA/anemometre.vhd Line: 108
 Info (12128): Elaborating entity "timer" for hierarchy "anemometre_avalon:avalonanemo_0|anemometre:anemometre_1|timer:timer_1hz" File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/functions/FPGA/anemometre.vhd Line: 117
@@ -4462,7 +4461,7 @@ Info (12128): Elaborating entity "altera_reset_controller" for hierarchy "altera
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1" File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/SOPC_dev/nios/nios_mcu/synthesis/submodules/altera_reset_controller.v Line: 208
 Info (12128): Elaborating entity "altera_reset_synchronizer" for hierarchy "altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_req_sync_uq1" File: /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/SOPC_dev/nios/nios_mcu/synthesis/submodules/altera_reset_controller.v Line: 220
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2021.12.07.15:07:34 Progress: Loading slda00c2e34/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2021.12.10.08:29:49 Progress: Loading slda00c2e34/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -4493,16 +4492,16 @@ Info (17049): 43 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file /home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/Functions_dev/output_files/projet_vhdl.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 1936 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1940 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 9 output pins
-    Info (21061): Implemented 1776 logic cells
+    Info (21061): Implemented 1780 logic cells
     Info (21064): Implemented 144 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 1095 megabytes
-    Info: Processing ended: Tue Dec  7 15:07:56 2021
-    Info: Elapsed time: 00:00:56
-    Info: Total CPU time (on all processors): 00:01:35
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 1093 megabytes
+    Info: Processing ended: Fri Dec 10 08:30:05 2021
+    Info: Elapsed time: 00:00:39
+    Info: Total CPU time (on all processors): 00:01:13
 
 
 +------------------------------------------+
