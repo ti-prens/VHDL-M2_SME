@@ -1,13 +1,15 @@
 --girouette
-library ieee;
-use ieee.std_logic_arith.all;
-use ieee.std_logic_1164.all;
-use ieee.std_logic_unsigned.all;
+--*********************************************************************
+-- M2 SME 2021/2022
+-- Boukah & Ziane & Jacquet
+--********************************************
 
 
---*********************************************
+
+
+--********************************************
 -- module girouette : mesure pwm
---**********************************************
+--*********************************************
 --entrées:
 --clk_50M : hologe 50MHz
 --raz_n: rest actif à 0 => initialise le circuit
@@ -18,20 +20,15 @@ use ieee.std_logic_unsigned.all;
 -- angle: angle associer a la pwm mesurer
 --********************************************************************
 
+
 entity girouette is
-	Port ( clk_50M : in STD_LOGIC;
+	Port ( 
+		clk_50M : in STD_LOGIC;
 		in_pwm     : in  std_logic;
 		reset_n    : in  std_logic;
-		continu    : in  std_logic;
-		start_stop : in  std_logic;
-		data_valid : out std_logic;
 		angle      : out std_logic_vector(15 downto 0)
 	);
 end girouette;
-
-
-
-
 
 ------------------------------------------------------------------------------------
 ---------------------------- OVER COMPLICATED ARCH ---------------------------------
@@ -55,86 +52,10 @@ architecture girouette_oc of girouette is
 	signal rising_edge_detected     : std_logic;
 	signal sortie_data_valid        : std_logic;
 
-
-	--------------------------------------------------------------------------------
-	-- declaration des composants
-
-	component timer
-		generic (
-			P : integer := 16 --taille Prescaler
-		);
-		port (
-			Clock, Enable, Reset : in  std_logic;
-			Enable_PWM           : in  std_logic;
-			Prescaler            : in  std_logic_vector(P-1 downto 0); --prescaler == (PSC + 1) 
-			Autoreload           : in  std_logic_vector(P-1 downto 0); --autoreload == (ARR + 1)
-			Capture_Compare      : in  std_logic_vector (P-1 downto 0);
-			coUEV                : out std_logic; --counter overflow update event
-			PWM_output           : out std_logic;
-			tim_counter          : out std_logic_vector(P-1 downto 0)
-		);
-	end component timer;
-
-	component compteur is
-		generic (
-			N : integer := 16
---*********************************************************************
--- M2 SME 2021/2022
--- Boukah & Ziane & Jacquet
---*********************************************************************
---          Giroutte  
---********************************************************************   
-library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-use IEEE.STD_LOGIC_UNSIGNED.ALL;
-use IEEE.NUMERIC_STD.ALL;
-
-
-
-entity GIROUETTE is
-    Port ( clock : in STD_LOGIC;
-           pwm : in std_logic;
-		 reset_n : in std_logic;
-           angle : out STD_LOGIC_VECTOR(9 downto 0) := (others => '0')
-           );
-end GIROUETTE;
-
-architecture arc_girouette of GIROUETTE is 
-	signal int_subclk : std_logic := '0';
-	signal reset_n_counter : std_logic := '0';
-	signal Etat_haut : STD_LOGIC_VECTOR(15 downto 0) := (others => '0');
-
-    	--------------------------------------------------------------------------------
-	-- declaration des composants
-
-component compteur is
-		generic (
-			N : integer
-		);
-		port (
-			clk            : in  std_logic;
-			en             : in  std_logic;
-			arst_n         : in  std_logic;
-			SRst           : in  std_logic;
-			counter_output : out std_logic_vector (N-1 downto 0)
-		);
-	end component compteur;
-
-
-	component edge_detector is
-		port (
-			clk, f_in     : in  std_logic;
-			reset         : in  std_logic;
-			detected_edge : out std_logic
-		);
-	end component edge_detector; --this is a rising edge detector
-
 	--------------------------------------------------------------------------------
 	-- description de l'architecture
 
 begin
-
-
 	edge_detector_pwm : entity edge_detector
 		port map (
 			clk           => clk_50M,
@@ -142,7 +63,6 @@ begin
 			reset         => reset,
 			detected_edge => pwm_detected_edge
 		);
-
 
 		timer_100khz : timer generic map (P => 16) --a fixer a 100khz
 		port map(
@@ -208,11 +128,4 @@ end architecture girouette_oc;
 
 
 
-    		freq_count : compteur generic map (N => 16) 
-		port map(
-			clk            => clk_50M,              --horloge
-			en             =>  --enable counting or decounting
-			arst_n         => '1',                  --reset asynchrone et inverse (1 => pas de reset asynchrone)
-			SRst           => internal_reset,       --reset synchrone
-			counter_output => counter
-		);
+    
