@@ -5,6 +5,7 @@ SME: BE VHDL
 Le projet consiste à développer un pilote de barre franche sur FPGA
 Binôme
 
+- Morad Boukah 
 - Prince Jacquet
 - Mouloud Ziane
 
@@ -18,9 +19,9 @@ realiser par le groupe de
 
 
 
-docs
+Docs 
 
-On y trouve les documents liés au BE ainsi qu'un lien vers le rapport sur Notion.so
+On y trouve les documents liés au BE ainsi qu'un lien vers le rapport sur [Notion.so] (https://www.notion.so/Rapport-BE-VHDL-bd6d71cffa6a4e919778c3ece7504cd6)
 
 TP
 
