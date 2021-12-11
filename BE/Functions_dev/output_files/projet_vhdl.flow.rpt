@@ -1,5 +1,5 @@
 Flow report for projet_vhdl
-Tue Dec  7 15:08:27 2021
+Sun Dec 12 00:13:36 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,20 +40,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Dec  7 15:08:27 2021       ;
+; Flow Status                        ; Successful - Sun Dec 12 00:13:36 2021       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; projet_vhdl                                 ;
-; Top-level Entity Name              ; nios_mcu                                    ;
+; Top-level Entity Name              ; gestion_boutton                             ;
 ; Family                             ; Cyclone IV E                                ;
 ; Device                             ; EP4CE22F17C6                                ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 1,664 / 22,320 ( 7 % )                      ;
-;     Total combinational functions  ; 1,542 / 22,320 ( 7 % )                      ;
-;     Dedicated logic registers      ; 965 / 22,320 ( 4 % )                        ;
-; Total registers                    ; 965                                         ;
-; Total pins                         ; 11 / 154 ( 7 % )                            ;
+; Total logic elements               ; 363 / 22,320 ( 2 % )                        ;
+;     Total combinational functions  ; 360 / 22,320 ( 2 % )                        ;
+;     Dedicated logic registers      ; 205 / 22,320 ( < 1 % )                      ;
+; Total registers                    ; 205                                         ;
+; Total pins                         ; 13 / 154 ( 8 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 273,408 / 608,256 ( 45 % )                  ;
+; Total memory bits                  ; 0 / 608,256 ( 0 % )                         ;
 ; Embedded Multiplier 9-bit elements ; 0 / 132 ( 0 % )                             ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 +------------------------------------+---------------------------------------------+
@@ -64,41 +64,34 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 12/07/2021 15:07:01 ;
+; Start date & time ; 12/12/2021 00:13:05 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; projet_vhdl         ;
 +-------------------+---------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                                 ;
-+-------------------------------------+-------------------------------------------------------------+---------------+-------------+----------------+
-; Assignment Name                     ; Value                                                       ; Default Value ; Entity Name ; Section Id     ;
-+-------------------------------------+-------------------------------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 255564388874363.163888602123171                             ; --            ; --          ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                                                 ; --            ; --          ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)                                   ; <None>        ; --          ; --             ;
-; EDA_TIME_SCALE                      ; 1 ps                                                        ; --            ; --          ; eda_simulation ;
-; ENABLE_SIGNALTAP                    ; On                                                          ; --            ; --          ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                                          ; --            ; --          ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                                           ; --            ; --          ; --             ;
-; MISC_FILE                           ; ../SOPC_dev/nios/nios_mcu/synthesis/../nios_mcu.cmp         ; --            ; --          ; --             ;
-; MISC_FILE                           ; ../SOPC_dev/nios/nios_mcu/synthesis/../../nios_mcu.qsys     ; --            ; --          ; --             ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family)                      ; --            ; nios_mcu    ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family)                      ; --            ; nios_mcu    ; Top            ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family)                      ; --            ; nios_mcu    ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                         ; --            ; --          ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                       ; --            ; --          ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                ; --            ; --          ; --             ;
-; SLD_FILE                            ; ../SOPC_dev/nios/nios_mcu/synthesis/nios_mcu.regmap         ; --            ; --          ; --             ;
-; SLD_FILE                            ; ../SOPC_dev/nios/nios_mcu/synthesis/nios_mcu.debuginfo      ; --            ; --          ; --             ;
-; SLD_FILE                            ; db/stp1_auto_stripped.stp                                   ; --            ; --          ; --             ;
-; SLD_INFO                            ; QSYS_NAME nios_mcu HAS_SOPCINFO 1 GENERATION_ID 1638783500  ; --            ; nios_mcu    ; --             ;
-; SOPCINFO_FILE                       ; ../SOPC_dev/nios/nios_mcu/synthesis/../../nios_mcu.sopcinfo ; --            ; --          ; --             ;
-; SYNTHESIS_ONLY_QIP                  ; On                                                          ; --            ; --          ; --             ;
-; TOP_LEVEL_ENTITY                    ; nios_mcu                                                    ; projet_vhdl   ; --          ; --             ;
-; USE_SIGNALTAP_FILE                  ; signaltap/stp1.stp                                          ; --            ; --          ; --             ;
-+-------------------------------------+-------------------------------------------------------------+---------------+-------------+----------------+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                ;
++-------------------------------------+----------------------------------------+---------------+-----------------+----------------+
+; Assignment Name                     ; Value                                  ; Default Value ; Entity Name     ; Section Id     ;
++-------------------------------------+----------------------------------------+---------------+-----------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 255564388874363.163926438523838        ; --            ; --              ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --              ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --              ; --             ;
+; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --              ; eda_simulation ;
+; ENABLE_SIGNALTAP                    ; On                                     ; --            ; --              ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --              ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --              ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; gestion_boutton ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; gestion_boutton ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; gestion_boutton ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --              ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --              ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --            ; --              ; --             ;
+; SLD_FILE                            ; db/stp1_auto_stripped.stp              ; --            ; --              ; --             ;
+; TOP_LEVEL_ENTITY                    ; gestion_boutton                        ; projet_vhdl   ; --              ; --             ;
+; USE_SIGNALTAP_FILE                  ; signaltap/stp1.stp                     ; --            ; --              ; --             ;
++-------------------------------------+----------------------------------------+---------------+-----------------+----------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -106,12 +99,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:51     ; 1.0                     ; 1062 MB             ; 00:01:30                           ;
-; Fitter               ; 00:00:16     ; 1.1                     ; 1538 MB             ; 00:00:18                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 800 MB              ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.2                     ; 876 MB              ; 00:00:04                           ;
-; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 1034 MB             ; 00:00:03                           ;
-; Total                ; 00:01:16     ; --                      ; --                  ; 00:01:58                           ;
+; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 934 MB              ; 00:00:39                           ;
+; Fitter               ; 00:00:07     ; 1.0                     ; 1516 MB             ; 00:00:09                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 794 MB              ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.1                     ; 842 MB              ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 1018 MB             ; 00:00:01                           ;
+; Total                ; 00:00:28     ; --                      ; --                  ; 00:00:52                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

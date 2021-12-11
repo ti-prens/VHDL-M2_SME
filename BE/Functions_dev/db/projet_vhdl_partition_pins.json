@@ -4,63 +4,51 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "leds_export[0]",
+					"name" : "ledBabord",
 					"strict" : false
 				},
 				{
-					"name" : "leds_export[1]",
+					"name" : "ledTribord",
 					"strict" : false
 				},
 				{
-					"name" : "leds_export[2]",
+					"name" : "ledSTBY",
 					"strict" : false
 				},
 				{
-					"name" : "leds_export[3]",
+					"name" : "out_bip",
 					"strict" : false
 				},
 				{
-					"name" : "leds_export[4]",
+					"name" : "codeFonction[0]",
 					"strict" : false
 				},
 				{
-					"name" : "leds_export[5]",
+					"name" : "codeFonction[1]",
 					"strict" : false
 				},
 				{
-					"name" : "leds_export[6]",
+					"name" : "codeFonction[2]",
 					"strict" : false
 				},
 				{
-					"name" : "leds_export[7]",
+					"name" : "clk_50M",
 					"strict" : false
 				},
 				{
-					"name" : "clk_clk",
+					"name" : "reset_n",
 					"strict" : false
 				},
 				{
-					"name" : "reset_reset_n",
+					"name" : "PB_Tribord",
 					"strict" : false
 				},
 				{
-					"name" : "in_freq_anemometre_in_freq_anemometre",
+					"name" : "PB_STBY",
 					"strict" : false
 				},
 				{
-					"name" : "altera_reserved_tms",
-					"strict" : false
-				},
-				{
-					"name" : "altera_reserved_tck",
-					"strict" : false
-				},
-				{
-					"name" : "altera_reserved_tdi",
-					"strict" : false
-				},
-				{
-					"name" : "altera_reserved_tdo",
+					"name" : "PB_Babord",
 					"strict" : false
 				}
 			]

@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE22F17C6
-set_global_assignment -name TOP_LEVEL_ENTITY nios_mcu
+set_global_assignment -name TOP_LEVEL_ENTITY gestion_boutton
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "13:14:34  SEPTEMBRE 13, 2021"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -53,32 +53,29 @@ set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name ENABLE_SIGNALTAP ON
 set_global_assignment -name USE_SIGNALTAP_FILE signaltap/stp1.stp
+
+set_global_assignment -name VHDL_FILE ../functions/FPGA/gestion_boutton.vhd
+set_global_assignment -name VHDL_FILE components/edge_detector.vhd
+set_global_assignment -name VHDL_FILE components/timer.vhd
+set_global_assignment -name VHDL_FILE components/compteur.vhd
+set_global_assignment -name VHDL_FILE components/comparateur.vhd
+set_global_assignment -name VHDL_FILE components/diviseur.vhd
+set_global_assignment -name SIGNALTAP_FILE signaltap/stp1.stp
+set_location_assignment PIN_J15 -to reset_n
+set_location_assignment PIN_A15 -to codeFonction[0]
+set_location_assignment PIN_A13 -to codeFonction[1]
+set_location_assignment PIN_B13 -to codeFonction[2]
+set_location_assignment PIN_A11 -to codeFonction[3]
+set_location_assignment PIN_R8 -to clk_50M
+set_location_assignment PIN_A6 -to ledBabord
+set_location_assignment PIN_B7 -to ledSTBY
+set_location_assignment PIN_B6 -to ledTribord
+set_location_assignment PIN_B4 -to out_bip
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-
-set_location_assignment PIN_J15 -to reset_reset_n
-set_location_assignment PIN_A15 -to leds_export[0]
-set_location_assignment PIN_A13 -to leds_export[1]
-set_location_assignment PIN_B13 -to leds_export[2]
-set_location_assignment PIN_A11 -to leds_export[3]
-set_location_assignment PIN_D1 -to leds_export[4]
-set_location_assignment PIN_F3 -to leds_export[5]
-set_location_assignment PIN_B1 -to leds_export[6]
-set_location_assignment PIN_L3 -to leds_export[7]
-set_location_assignment PIN_R8 -to clk_clk
-set_global_assignment -name QIP_FILE ../SOPC_dev/nios/nios_mcu/synthesis/nios_mcu.qip
-set_global_assignment -name VHDL_FILE ../functions/SOPC/anemometre_avalon.vhd
-set_global_assignment -name VHDL_FILE ../functions/FPGA/anemometre.vhd
-set_global_assignment -name VHDL_FILE components/edge_detector.vhd
-set_global_assignment -name VHDL_FILE components/timer.vhd
-set_global_assignment -name VHDL_FILE components/bascule.vhd
-set_global_assignment -name VHDL_FILE components/compteur.vhd
-set_global_assignment -name VHDL_FILE src/AvalonSlave.vhd
-set_global_assignment -name VHDL_FILE components/comparateur.vhd
-set_global_assignment -name VHDL_FILE src/projet_vhdl.vhd
-set_global_assignment -name VHDL_FILE components/diviseur.vhd
-set_global_assignment -name SIGNALTAP_FILE signaltap/stp1.stp
-set_location_assignment PIN_D3 -to in_freq_anemometre_in_freq_anemometre
+set_location_assignment PIN_A5 -to PB_Babord
+set_location_assignment PIN_D6 -to PB_STBY
+set_location_assignment PIN_D5 -to PB_Tribord
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SLD_FILE db/stp1_auto_stripped.stp
