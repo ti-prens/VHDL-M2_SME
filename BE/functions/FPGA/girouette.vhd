@@ -1,12 +1,8 @@
+-- vsg_off
 --girouette
 --*********************************************************************
 -- M2 SME 2021/2022
 -- Boukah & Ziane & Jacquet
---********************************************
-
-
-
-
 --********************************************
 -- module girouette : mesure pwm
 --*********************************************
@@ -23,7 +19,7 @@
 
 entity girouette is
 	Port ( 
-		clk_50M : in STD_LOGIC;
+		clk_50M : in std_logic;
 		in_pwm     : in  std_logic;
 		reset_n    : in  std_logic;
 		angle      : out std_logic_vector(15 downto 0)
@@ -35,16 +31,14 @@ end girouette;
 ------------------------------------------------------------------------------------
 
 architecture girouette_oc of girouette is
-
-	--------------------------------------------------------------------------------
 	-- on declare les variables de l'architecture avant le premier begin
 
 	--Prescaler: in std_logic_vector(P-1 downto 0) := 2;
 	--signal signal_prescaler: std_logic_vector( downto 0) := x"00ff";
 	signal timer_enable             : std_logic := '1';
-	signal deci_nano                 : std_logic;
+	signal deci_nano                : std_logic;
 	signal period_counter           : std_logic_vector (7 downto 0);
-	signal dc_counter           : std_logic_vector (7 downto 0);
+	signal dc_counter           	: std_logic_vector (7 downto 0);
 	signal pwm_period_counter_reset : std_logic;
 	signal pwm_dc_counter_reset     : std_logic;
 	signal internal_reset           : std_logic;
