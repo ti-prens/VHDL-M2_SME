@@ -4,7 +4,7 @@ use ieee.numeric_std.ALL;
 
 entity comparateur is
 	generic (
-		N : integer
+		N : integer := 0
 	);
 	port (
 		valeur_a, valeur_b : in  std_logic_vector (N-1 downto 0);

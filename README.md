@@ -1,14 +1,13 @@
-# projet_vhdl
+# Projet_vhdl
 
-SME: BE VHDL
+M2 SME: BE VHDL
 
 Le projet consiste à développer un pilote de barre franche sur FPGA
-Binôme
+Binôme:
 
 - Morad Boukah 
 - Prince Jacquet
 - Mouloud Ziane
-
 
 
 Structure du répertoire tirer de [Lien github vers le répertoire d'origin](https://github.com/Touftoufe/BE-VHDL)
@@ -16,6 +15,7 @@ realiser par le groupe de
 
 - Sofiane AOUCI
 - Kassandra BONHOURE
+
 
 
 Projets forunis par Master-EEA-SME pour le cours avec des examples d'applications : 
@@ -28,9 +28,10 @@ Projets forunis par Master-EEA-SME pour le cours avec des examples d'application
 
 Docs 
 
+
 On y trouve les documents liés au BE ainsi qu'un lien vers le rapport sur [Notion.so] (https://www.notion.so/Rapport-BE-VHDL-bd6d71cffa6a4e919778c3ece7504cd6)
 
-TP
+TP de base
 
 On y trouve les premiers projets d'initiation au développement en VHDL
 
