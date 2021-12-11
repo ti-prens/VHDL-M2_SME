@@ -11,6 +11,15 @@ USE ieee.numeric_std.ALL;
 -- lors d'un debordement ou d'un reset un signal Counter Overflow passe à Un durant un cycle d'horloge 
 
 
+-----------------------------------------------------------------------------------------
+  --Fpwm = Fclk / ( (Autoreload + 1) * (Prescaler + 1)
+
+    --Prescaler  <= x"0004"; -- Prescaler == PSC
+    --Autoreload <= x"270F"; -- 40 en hexa
+                           -- ARR == Autoreload  
+-----------------------------------------------------------------------------------------						   
+
+
 entity timer is
 	generic (
 		P : integer := 16 --taille Prescaler

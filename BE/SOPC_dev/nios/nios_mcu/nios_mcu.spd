@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<simPackage>
- <file path="simulation/nios_mcu.vhd" type="VHDL" />
- <topLevel name="nios_mcu" />
- <deviceFamily name="cycloneive" />
- <modelMap controllerPath="nios_mcu.onchip_ram" modelPath="nios_mcu.onchip_ram" />
-</simPackage>

@@ -17,7 +17,17 @@ realiser par le groupe de
 - Kassandra BONHOURE
 
 
+
+Projets forunis par Master-EEA-SME pour le cours avec des examples d'applications : 
+- SailingBoatSimulator
+[Lien github de reference firmware](https://github.com/Master-EEA-SME/SailingBoatSimulatorFW)
+[Lien github de reference software](https://github.com/Master-EEA-SME/SailingBoatSimulatorSW)
+[Lien github de reference firmware tempalte](https://github.com/Master-EEA-SME/SailingBoatSimulatorTemplateFW)
+- Projet de reference 
+[Lien github de reference VHDL_TP](https://github.com/Master-EEA-SME/VHDL_TP)
+
 Docs 
+
 
 On y trouve les documents liés au BE ainsi qu'un lien vers le rapport sur [Notion.so] (https://www.notion.so/Rapport-BE-VHDL-bd6d71cffa6a4e919778c3ece7504cd6)
 

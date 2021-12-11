@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+newSoftwareExampleWizardPage.defaultLocation=/home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/SOPC_dev/nios/software/BE_VHDL
+newSoftwareExampleWizardPage.sopcinfoFile=/home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/SOPC_dev/nios/nios_mcu.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=/home/prince/Seafile/Education/Fac/M2_SME/Synthese_Mise_en_Oeuvre_Systemes/VHDL-M2_SME/BE/SOPC_dev/nios/software/BE_VHDL_bsp

@@ -4,35 +4,31 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "data_anemometre[0]",
+					"name" : "ledBabord",
 					"strict" : false
 				},
 				{
-					"name" : "data_anemometre[1]",
+					"name" : "ledTribord",
 					"strict" : false
 				},
 				{
-					"name" : "data_anemometre[2]",
+					"name" : "ledSTBY",
 					"strict" : false
 				},
 				{
-					"name" : "data_anemometre[3]",
+					"name" : "out_bip",
 					"strict" : false
 				},
 				{
-					"name" : "data_anemometre[4]",
+					"name" : "codeFonction[0]",
 					"strict" : false
 				},
 				{
-					"name" : "data_anemometre[5]",
+					"name" : "codeFonction[1]",
 					"strict" : false
 				},
 				{
-					"name" : "data_anemometre[6]",
-					"strict" : false
-				},
-				{
-					"name" : "data_anemometre[7]",
+					"name" : "codeFonction[2]",
 					"strict" : false
 				},
 				{
@@ -40,35 +36,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "in_freq_anemometre",
-					"strict" : false
-				},
-				{
 					"name" : "reset_n",
 					"strict" : false
 				},
 				{
-					"name" : "continu",
+					"name" : "PB_Tribord",
 					"strict" : false
 				},
 				{
-					"name" : "start_stop",
+					"name" : "PB_STBY",
 					"strict" : false
 				},
 				{
-					"name" : "altera_reserved_tms",
-					"strict" : false
-				},
-				{
-					"name" : "altera_reserved_tck",
-					"strict" : false
-				},
-				{
-					"name" : "altera_reserved_tdi",
-					"strict" : false
-				},
-				{
-					"name" : "altera_reserved_tdo",
+					"name" : "PB_Babord",
 					"strict" : false
 				}
 			]

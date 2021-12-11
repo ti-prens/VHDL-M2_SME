@@ -1,0 +1,9 @@
+18:22:05 **** Incremental Build of configuration Nios II for project BE_VHDL ****
+make all 
+Info: Building ../BE_VHDL_bsp/
+make --no-print-directory -C ../BE_VHDL_bsp/
+[BSP build complete]
+[BE_VHDL build complete]
+
+18:22:05 Build Finished (took 246ms)
+

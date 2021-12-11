@@ -1,14 +1,14 @@
-Analysis & Synthesis Status : Successful - Mon Nov 22 11:02:25 2021
+Analysis & Synthesis Status : Successful - Sun Dec 12 00:13:22 2021
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : projet_vhdl
-Top-level Entity Name : anemometre
+Top-level Entity Name : gestion_boutton
 Family : Cyclone IV E
-Total logic elements : 1,004
-    Total combinational functions : 616
-    Dedicated logic registers : 756
-Total registers : 756
-Total pins : 14
+Total logic elements : 398
+    Total combinational functions : 360
+    Dedicated logic registers : 205
+Total registers : 205
+Total pins : 13
 Total virtual pins : 0
-Total memory bits : 22,528
+Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
 Total PLLs : 0
