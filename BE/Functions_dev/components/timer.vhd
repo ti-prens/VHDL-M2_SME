@@ -1,8 +1,13 @@
+--*******************************************************************
+-- M2 SME 2021/2022
+-- BE Synthèse et mise en œuvre des systèmes 
+-- Boukah & Jacquet & Ziane 
+--*******************************************************************
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 USE ieee.numeric_std.ALL;
-
+--**************************************************************************************************************************
 --le timer est un peripherique qui sert à declencher un evenement apres un certain nombres de ce temps ( de cycle d'horloge)
 -- CE timer peut compter que dans l'ordre croissant et de 0 à son max puis retourne vers 0
 -- Il est fait d'un Diviseur de 16 bit par defaut :  pour reduire la frequence de l'horloge qui la cadence
@@ -18,7 +23,7 @@ USE ieee.numeric_std.ALL;
     --Autoreload <= x"270F"; -- 40 en hexa
                            -- ARR == Autoreload  
 -----------------------------------------------------------------------------------------						   
-
+--***************************************************************************************************************************
 
 entity timer is
 	generic (
@@ -35,14 +40,6 @@ entity timer is
 		tim_counter          : out std_logic_vector(P-1 downto 0)
 	);
 end entity timer;
-
-
-
-
-
-
-
-
 
 architecture rtl of timer is
 
@@ -65,9 +62,7 @@ architecture rtl of timer is
 	signal PWM_outputs : std_logic_vector (2 downto 0);
 
 	--signal pwm_mode : std_logic_vector (2 downto 0):= 000; --000 => A REMPLIR LES DIFFERENT MODES
-
-
-	--------------------------------------------------------------------------------
+	-----------------------------------------------------------------------------------------------------------------------
 	-- declaration des composants
 
 	component diviseur
@@ -95,8 +90,6 @@ architecture rtl of timer is
 	end component compteur;
 
 
-
-
 	component comparateur is
 		generic (
 			N : integer
@@ -107,9 +100,6 @@ architecture rtl of timer is
 		-- sortie_comparaison : 100 => a > b ; 010 => a = b ; 001 => a < b
 		);
 	end component comparateur;
-
-
-
 	--------------------------------------------------------------------------------
 	-- description de l'architecture
 
@@ -148,9 +138,6 @@ begin
 
 		);
 
-
-
-
 	pReset : process(Clock,Reset)
 	begin
 		--General Reset
@@ -170,15 +157,8 @@ begin
 		end if;
 	end process pReset;
 
-
-
-
-
-
 	tim_counter <= timer_counter;
 	PWM_output  <= (PWM_outputs(0) or PWM_outputs(1)) and Enable_PWM;
-
-
 
 end architecture rtl;
 

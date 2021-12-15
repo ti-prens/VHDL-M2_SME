@@ -1,3 +1,9 @@
+--*******************************************************************
+-- M2 SME 2021/2022
+-- BE Synthèse et mise en œuvre des systèmes 
+-- Boukah & Jacquet & Ziane 
+--*******************************************************************
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;

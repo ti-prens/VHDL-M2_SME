@@ -1,3 +1,9 @@
+--*******************************************************************
+-- M2 SME 2021/2022
+-- BE Synthèse et mise en œuvre des systèmes 
+-- Boukah & Jacquet & Ziane 
+--*******************************************************************
+
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
@@ -13,9 +19,6 @@ entity pwm is
 		PWm_output	: out std_logic
 	);
 end entity pwm;
-
-
-
 
 architecture rtl of pwm is
 -- on decl	are les variables d e l'architecture avant le premier begin
@@ -41,7 +44,6 @@ component diviseur
 	);
 end component diviseur;
  
-
 component comparateur 
   --generic ( Q_1 : integer  : = 5);
     generic (
@@ -63,7 +65,6 @@ component compteur
 end component compteur;
 
 
-
 begin
 	
 	div: diviseur -- div est une instance du compteur
@@ -71,7 +72,6 @@ begin
 		GeneralOutput	:
 	port map (Clock => CLOCK,Enable => ENABLE, Reset => internal_reset, Prescaler =>  );
 	
-
 	compt: compteur -- compt est une instance du compteur
 	generic map (N => P)
 	port map (clk => Clock,  arst_n=>'1', en => '1', q => sortie_compteur, SRst => reset_synchrone);
@@ -93,8 +93,7 @@ begin
 	GeneralOutput(1) <=  sortie_comparateur(1);
 	GeneralOutput(2) <=  sortie_comparateur(2);
 
-	
-	
+
 end architecture rtl;
 
 --generic ( NomVariable : type  : = "valeur");

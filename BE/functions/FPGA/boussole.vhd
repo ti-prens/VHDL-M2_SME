@@ -1,4 +1,8 @@
---boussole
+--*******************************************************************
+-- M2 SME 2021/2022
+-- BE Synthèse et mise en œuvre des systèmes 
+-- Boukah & Jacquet & Ziane 
+--*******************************************************************
 library ieee;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_1164.all;
@@ -32,9 +36,6 @@ entity boussole is
 	);
 end boussole;
 
-
-
-
 ------------------------------------------------------------------------------------
 ---------------------------- OVER COMPLICATED ARCH ---------------------------------
 ------------------------------------------------------------------------------------
@@ -53,7 +54,6 @@ architecture boussole_oc of boussole is
 	signal pwm_mode             : std_logic;
 	signal rising_edge_detected : std_logic;
 	signal sortie_data_valid    : std_logic;
-
 
 	--------------------------------------------------------------------------------
 	-- declaration des composants
@@ -183,7 +183,6 @@ begin
 	--'1' when continu = '1' and second = '1' else
 	--'1' when continu = '0' and second = '1' else
 	--timer must be disable when continu = '0'
-
 
 	--data_anemometre <= counter;
 

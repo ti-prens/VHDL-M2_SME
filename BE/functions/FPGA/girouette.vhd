@@ -1,9 +1,12 @@
---girouette
+--*******************************************************************
+-- M2 SME 2021/2022
+-- BE Synthèse et mise en œuvre des systèmes 
+-- Boukah & Jacquet & Ziane 
+--*******************************************************************
 library ieee;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
-
 
 --*********************************************
 -- module girouette : mesure pwm
@@ -17,7 +20,6 @@ use ieee.std_logic_unsigned.all;
 -- sorties:
 -- angle: angle associer a la pwm mesurer
 --********************************************************************
-
 entity girouette is
 	Port ( clk_50M : in STD_LOGIC;
 		in_pwm     : in  std_logic;
@@ -28,10 +30,6 @@ entity girouette is
 		angle      : out std_logic_vector(15 downto 0)
 	);
 end girouette;
-
-
-
-
 
 ------------------------------------------------------------------------------------
 ---------------------------- OVER COMPLICATED ARCH ---------------------------------
@@ -151,8 +149,6 @@ begin
 			counter_output => period_counter
 		);
 
-
-
 	pOutput : process(clk_50M, reset_n)
 
 	begin
@@ -170,7 +166,6 @@ begin
 		end if;
 
 	end process pOutput;
-
 
 end architecture girouette_oc;
 

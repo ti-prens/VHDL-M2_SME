@@ -1,10 +1,17 @@
+
+--*******************************************************************
+-- M2 SME 2021/2022
+-- BE SynthÃ¨se et mise en Å“uvre des systÃ¨mes 
+-- Boukah & Jacquet & Ziane 
+--*******************************************************************
+
 library ieee;
 use ieee.std_logic_1164.all;
 -- commentaire : On fait une bascule D
 -- Il faut un fichier top level : on choisi ce fichier comme top lelevl
 
--- on cree nos entitées
--- une entité est un composant à realiser qui a des entree et des sorties
+-- on cree nos entitï¿½es
+-- une entitï¿½ est un composant ï¿½ realiser qui a des entree et des sorties
 entity BasculeD is 
 	port (
 		Reset 	: in std_logic;
@@ -15,7 +22,7 @@ entity BasculeD is
 	);
 end entity BasculeD;
 
--- l'architecture decrit le fonctionnement de l'entité
+-- l'architecture decrit le fonctionnement de l'entitï¿½
 architecture rtl of BasculeD is -- rtl -> register transistor level
 begin
 -- Les processus dans l'architecture sont le detaile de

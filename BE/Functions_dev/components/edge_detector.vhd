@@ -1,5 +1,9 @@
---Mouloud ZIANE & Prince JACQUET
---M2 SME
+--*******************************************************************
+-- M2 SME 2021/2022
+-- BE Synthèse et mise en œuvre des systèmes 
+-- Boukah & Jacquet & Ziane 
+--*******************************************************************
+
 Library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;

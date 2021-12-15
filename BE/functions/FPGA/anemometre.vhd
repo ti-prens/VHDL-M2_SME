@@ -1,13 +1,17 @@
---anenometre
+--*******************************************************************
+-- M2 SME 2021/2022
+-- BE Synthèse et mise en œuvre des systèmes 
+-- Boukah & Jacquet & Ziane 
+--*******************************************************************
+
 library ieee;
 use ieee.std_logic_arith.all;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
 
-
---*********************************************
+--*******************************************************************
 -- module gestion_anemometre
---**********************************************
+--*******************************************************************
 --entrées:
 --clk_50M : hologe 50MHz
 --raz_n: rest actif à 0 => initialise le circuit
@@ -16,7 +20,7 @@ use ieee.std_logic_unsigned.all;
 -- en mode continu la donnée est rafraîchie toute les secondes
 --start_stop: en monocoup si=1 démarre une acquisition, si =0
 -- remet à 0 le signal data_valid
---**************************************************************
+--*******************************************************************
 -- sorties:
 -- data_valid: =1 lorsque une mesure est valide
 -- est remis à 0 quand start_stop passe à 0
@@ -33,10 +37,6 @@ entity anemometre is
 		data_anemometre    : buffer STD_LOGIC_VECTOR(7 downto 0) := (others => '0')
 	);
 end anemometre;
-
-
-
-
 
 ------------------------------------------------------------------------------------
 ---------------------------- OVER COMPLICATED ARCH ---------------------------------

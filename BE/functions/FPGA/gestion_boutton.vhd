@@ -1,8 +1,15 @@
 
 --*********************************************************************
 -- M2 SME 2021/2022
--- Boukah & Ziane & Jacquet
+-- BE Synthèse et mise en œuvre des systèmes 
+-- Boukah & Jacquet & Ziane 
 --*********************************************************************
+LIBRARY ieee;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+
+--*******************************************************************
 --          module gestion des boutons poussoirs 
 --********************************************************************
 -- entrées: BP_Babord,BP_Tribord, BP_STBY, clk, reset_n
@@ -20,13 +27,6 @@
 -- =0111: décrément de 1° consigne de cap
 -- =0110: décrément de 10° consigne de cap
 --*********************************************************************
-
-
-LIBRARY ieee;
-use ieee.std_logic_arith.all;
-use ieee.std_logic_1164.all;
-use ieee.std_logic_unsigned.all;
-
 entity gestion_boutton is
 	PORT (
 		clk_50M        : in  std_logic;
@@ -42,8 +42,6 @@ entity gestion_boutton is
 	);
 end gestion_boutton ;
 
-
-
 ------------------------------------------------------------------------------------
 --------------------------------- INSPIRED ARCH ------------------------------------
 ------------------------------------------------------------------------------------
@@ -53,11 +51,9 @@ architecture arch_gestion_boutton of gestion_boutton is
 	--------------------------------------------------------------------------------
 	-- on declare les variables de l'architecture 
 	--------------------------------------------------------------------------------
-
 	signal blink             : std_logic :='0';
 	signal Clk500ms : std_logic;
 	signal half_on  : std_logic;
-
 
 	signal bip_simple : std_logic;
 	signal bip_double : std_logic;
@@ -73,12 +69,9 @@ architecture arch_gestion_boutton of gestion_boutton is
 	signal reset_Delay : std_logic;
 	signal Delay       : std_logic_vector(15 downto 0) := (others => '0');
 	
-	
 	signal BP_Babord      :  std_logic;
 	signal BP_Tribord     :   std_logic;
 	signal BP_STBY        :   std_logic;
-	
-	
 	
 	signal 	PB_Babord_d     :   std_logic;
 	signal	PB_Tribord_d    :   std_logic;
@@ -117,7 +110,6 @@ architecture arch_gestion_boutton of gestion_boutton is
 		);
 	end component edge_detector;
 
-
 	component compteur is
 		generic (
 			N : integer
@@ -131,12 +123,9 @@ architecture arch_gestion_boutton of gestion_boutton is
 		);
 	end component compteur;
 	
-	
-
 	--------------------------------------------------------------------------------
 	-- description de l'architecture
 	--------------------------------------------------------------------------------
-
 begin
 
 		timer_2hz : timer generic map (P => 16) --a fixer a 2hz => periode de 500ms
@@ -154,8 +143,6 @@ begin
 		);
 		
 		
-		
-
 		timer_pwm : timer generic map (P => 16)
 		port map (
 			Clock           => clk_50M,
@@ -221,16 +208,8 @@ begin
 			SRst           => reset_Delay,
 			counter_output => Delay
 		);
-		
-		
-
-		
-	
-
 	------------------------------------------------------------------------------------
 
-
-	
 	bip_double <= '0' when (bip_counter < 1250) else
 						'1' when (bip_counter >= 1250  and bip_counter < 2500) else
 						'0' when (bip_counter >= 2500  and bip_counter < 3740 )else
@@ -244,8 +223,6 @@ begin
 	internal_reset    <= not reset_n;
 	pwm_reset         <= internal_reset;
 	timer_100ms_reset <= internal_reset;
-
-
 	------------------------------------------------------------------------------------
 	
 	pDebounce : process(clk_50M)
@@ -265,16 +242,14 @@ begin
 			end if;
 		end if;
 	end process pDebounce;
-	--------------------------------------------------------------------------------
-	--State machine bouton poussoir
 
+	--State machine bouton poussoir--------------------------------------------------------
 
 	gestion_bp : process (clk_50M, reset_n)
 		variable present_State, next_State : integer range 0 to 13 := 0;
 	begin
 		if(reset_n = '0') then
 			present_State := 0;
-
 
 		elsif rising_edge(clk_50M) then
 			case present_State is
@@ -505,10 +480,7 @@ begin
 		end if;
 	end process gestion_bp;
 
-
 end arch_gestion_boutton;
-
-
 -------------------------------------------------------------------------------------
 
 
